@@ -65,7 +65,7 @@
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-          <?php wp_nav_menu( array( 'menu' => 'main-menu', 'container' => false, 'menu_class' => 'nav', 'menu_id' => 'main-menu', 'walker' => new bootstrapwp_Walker_Nav_Menu) ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'main-menu', 'container' => false, 'fallback_cb'     => 'none','menu_class' => 'nav', 'menu_id' => 'main-menu', 'walker' => new bootstrapwp_Walker_Nav_Menu) ); ?>
         </div>
       </div>
     </div>

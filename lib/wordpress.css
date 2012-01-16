@@ -393,7 +393,6 @@ h2 + table {
 @media (max-width: 480px) {
   /* Reduce padding above jumbotron */
   body {
-    padding-top: 70px;
   }
   /* Change up some type stuff */
   h1 small {
