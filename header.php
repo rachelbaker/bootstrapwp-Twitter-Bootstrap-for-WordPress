@@ -45,11 +45,11 @@ get_header(); ?>
     <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png">
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>  onload="prettyPrint()">

@@ -23,6 +23,7 @@ if ( ! isset( $content_width ) )
  */
   function bootstrapwp_css_loader() {
     wp_enqueue_style('bootstrap.css', get_template_directory_uri().'/css/bootstrap.css', false ,'1.0', 'all' );
+    wp_enqueue_style('responsive.css', get_template_directory_uri().'/css/bootstrap-responsive.css', false, '1.0', 'all' );
     wp_enqueue_style('docs.css', get_template_directory_uri().'/css/docs.css', false ,'1.0', 'all' );
     wp_enqueue_style('prettify.css', get_template_directory_uri().'/css/prettify.css', false ,'1.0', 'all' );
   wp_enqueue_style('style.css', get_template_directory_uri().'/style.css', false ,'1.0', 'all' );
