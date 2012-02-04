@@ -66,17 +66,5 @@ get_header(); ?>
 ?>
         </div>
       </div>
-      <?php get_footer();?>
-   <div class="span4">
-          <?php
-    if ( function_exists('dynamic_sidebar')) dynamic_sidebar("home-middle");
-?>
-       </div>
-        <div class="span4">
-          <?php
-    if ( function_exists('dynamic_sidebar')) dynamic_sidebar("home-right");
-?>
-        </div>
-      </div>
       </div><!-- /.marketing -->
       <?php get_footer();?>

@@ -35,8 +35,8 @@ if ( ! isset( $content_width ) )
  * Load Javascript for the Twitter Bootstrap JS Features - YOU SHOULD DISABLE ANY JS FILES YOU ARE NOT USING
  */
   function bootstrapwp_js_loader() {
+        wp_enqueue_script('jquery.js', get_template_directory_uri().'/js/jquery.js', array('jquery'),'1.4', true );
        wp_enqueue_script('prettify.js', get_template_directory_uri().'/js/prettify.js', array('jquery'),'1.0', true );
-         
        wp_enqueue_script('transition.js', get_template_directory_uri().'/js/bootstrap-transition.js', array('jquery'),'1.0', true );
        wp_enqueue_script('alert.js', get_template_directory_uri().'/js/bootstrap-alert.js', array('jquery'),'1.0', true );
        wp_enqueue_script('modal.js', get_template_directory_uri().'/js/bootstrap-modal.js', array('jquery'),'1.0', true );

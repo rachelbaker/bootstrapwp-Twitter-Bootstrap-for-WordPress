@@ -5,10 +5,36 @@ Bootstrap is a responsive front-end toolkit from Twitter designed to kickstart w
 
 Version 1.0 Change Log
 
-* Added bootstrap-responsive.css to Functions.php style loading script
+__Header.php__
+* Added body data attributes: data-spy="scroll" data-target=".subnav" data-offset="50" data-rendering="true"
+* Updated wp_nav_menu function array, added "'container' => 'div', 'container_class' => 'nav-collapse'," to provide div wrapper with proper class
+
+
+__Functions.php__
+* Added bootstrap-responsive.css to bootstrapwp_css_loader function
+* Added jquery.js to bootstrapwp_js_loader function
+
+__Page-JSGuide.php__
+* Updated Javascript Guide Template to match content from Bootstrap javascript.html file
+
+__Footer.php__
+* Added jQuery onload function to allow scrollspy to work with the nav and subnav bars
+
+
+__Style.css__
+* Updated icon image location to match theme setup
+* Added .icon-white class with corrected image location
+
+
+__Index.php__
+* Edited content on index.php template to directly correlate with index.html Bootstrap file
+
+
+__Other/Misc.__
 * Updated CSS and JS files to Bootstrap 2 Final Release files 
-* Updated Javascript Guide Template
+
 * Removed "lib" folder and replaced with Bootstrap "less" folder
+
 
 
 **Latest version release: .7 (01/22/2012)**

@@ -4,7 +4,7 @@ Theme URI: http://www.rachelbaker.me
 Author: Rachel Baker
 Author URI: http://www.rachelbaker.me
 Description: A semantic HTML base theme for WordPress ported from Twitter Bootstrap
-Version: 0.7
+Version: 1.0
 License: GNU General Public License
 License URI: license.txt
 
@@ -169,8 +169,18 @@ white-space: nowrap;
 /* Image Styles
 ----------------------------------------------------------------------------------------*/
 
-i {background-image: url("img/glyphicons-halflings-sprite.png");}
-
+[class^="icon-"] {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: text-top;
+  background-image: url(img/glyphicons-halflings.png);
+  background-repeat: no-repeat;
+  *margin-right: .3em;
+}
+.icon-white {
+  background-image: url(img/glyphicons-halflings-white.png);
+}
 .alignleft {
   display: inline;
   float: left;

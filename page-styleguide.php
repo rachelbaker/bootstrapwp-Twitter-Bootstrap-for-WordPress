@@ -5,6 +5,8 @@
  * @package WordPress
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.7
+ * 
+ * Last Updated: February 4, 2012
  */
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
@@ -15,7 +17,17 @@ get_header(); ?>
       <header class="jumbotron subhead" id="overview">
         <h1><?php the_title();?></h1>
         <p class="lead">On top of the scaffolding, basic HTML elements are styled and enhanced with extensible classes to provide a fresh, consistent look and feel.</p>
-      </header>
+  <div class="subnav">
+    <ul class="nav nav-pills">
+      <li><a href="#typography">Typography</a></li>
+      <li><a href="#code">Code</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#icons">Icons by Glyphicons</a></li>
+    </ul>
+  </div>
+</header>
 
 
 <!-- Typography
@@ -31,7 +43,7 @@ get_header(); ?>
   <div class="row">
     <div class="span4">
       <h3>Typographic scale</h3>
-      <p>The entire typographic grid is based on two Less variables in our preboot.less file: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height.</p>
+      <p>The entire typographic grid is based on two Less variables in our variables.less file: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height.</p>
       <p>We use those variables, and some math, to create the margins, paddings, and line-heights of all our type and more.</p>
     </div>
     <div class="span4">
@@ -126,7 +138,7 @@ get_header(); ?>
       </address>
       <address>
         <strong>Full Name</strong><br>
-        <a mailto="#">first.last@gmail.com</a>
+        <a href="mailto:#">first.last@gmail.com</a>
       </address>
     </div>
     <div class="span4">
@@ -281,104 +293,52 @@ get_header(); ?>
       </dl>
     </div>
   </div><!-- /row -->
+</section>
 
 
-  <!-- Code -->
 
-  <h2>Code <small>Inline and block</small></h2>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th style="width: 190px;">Element</th>
-        <th>Result</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>&lt;code&gt;</code></td>
-        <td>In a line of text like this, your wrapped code will look like this <code>&lt;html&gt;</code> element.</td>
-      </tr>
-      <tr>
-        <td><code>&lt;pre&gt;</code></td>
-        <td>
-<pre>&lt;div&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Something right here...&lt;/p&gt;
-&lt;/div&gt;</pre>
-          <p><strong>Note:</strong> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
-        </td>
-      </tr>
-      <tr>
-        <td><code>&lt;pre class="prettyprint"&gt;</code></td>
-        <td>
-          <p>Using the google-code-prettify library, you're blocks of code get a slightly different visual style and automatic syntax highlighting. You can also add an additional class to add line numbers.</p>
-<pre class="prettyprint">&lt;div&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Something right here...&lt;/p&gt;
-&lt;/div&gt;</pre>
-<pre class="prettyprint linenums">&lt;div&gt;
-  &lt;h1&gt;Heading&lt;/h1&gt;
-  &lt;p&gt;Something right here...&lt;/p&gt;
-&lt;/div&gt;</pre>
-          <p><a href="http://code.google.com/p/google-code-prettify/">Download google-code-prettify</a> and view the readme for <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">how to use</a>.</p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Labels -->
-  <h2>Inline labels <small>for special attention</small></h2>
-  <table class="table table-bordered table-striped">
-    <thead>
-      <tr>
-        <th style="width: 190px;">Labels</th>
-        <th>Markup</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <span class="label">Default</span>
-        </td>
-        <td>
-          <code>&lt;span class="label"&gt;Default&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label success">New</span>
-        </td>
-        <td>
-          <code>&lt;span class="label success"&gt;New&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label warning">Warning</span>
-        </td>
-        <td>
-          <code>&lt;span class="label warning"&gt;Warning&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label important">Important</span>
-        </td>
-        <td>
-          <code>&lt;span class="label important"&gt;Important&lt;/span&gt;</code>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="label notice">Notice</span>
-        </td>
-        <td>
-          <code>&lt;span class="label notice"&gt;Notice&lt;/span&gt;</code>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-
+<!-- Code
+================================================== -->
+<section id="code">
+  <div class="page-header">
+    <h1>Code <small>Inline and block code snippets</small></h1>
+  </div>
+  <div class="row">
+    <div class="span4">
+      <h2>Inline</h2>
+      <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+<pre class="prettyprint linenums">
+For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
+</pre>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>Basic block</h2>
+      <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to turn any carets into their unicode characters for proper rendering.</p>
+<pre>
+&lt;p&gt;Sample text here...&lt;/p&gt;
+</pre>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p><strong>Note:</strong> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
+    </div><!--/span-->
+    <div class="span4">
+      <h2>Google Prettify</h2>
+      <p>Take the same <code>&lt;pre&gt;</code> element and add two optional classes for enhanced rendering.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;p&gt;Sample text here...&lt;/p&gt;
+</pre>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre class="prettyprint
+     linenums"&gt;
+  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+      <p><a href="http://code.google.com/p/google-code-prettify/">Download google-code-prettify</a> and view the readme for <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html">how to use</a>.</p>
+    </div><!--/span-->
+  </div><!--/row-->
 </section>
 
 
@@ -466,14 +426,14 @@ get_header(); ?>
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;...&lt;/th&gt;
-      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;…&lt;/th&gt;
+      &lt;th&gt;…&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;...&lt;/td&gt;
-      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;…&lt;/td&gt;
+      &lt;td&gt;…&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -536,7 +496,7 @@ get_header(); ?>
       <p>Tables are automatically styled with only a few borders to ensure readability and maintain structure. With 2.0, the <code>.table</code> class is required.</p>
 <pre class="prettyprint linenums">
 &lt;table class="table"&gt;
-  ...
+  …
 &lt;/table&gt;</pre>
     </div>
     <div class="span8">
@@ -578,10 +538,10 @@ get_header(); ?>
   <div class="row">
     <div class="span4">
       <p>Get a little fancy with your tables by adding zebra-striping&mdash;just add the <code>.table-striped</code> class.</p>
-      <p class="muted"><strong>Note:</strong> Sprited tables use the <code>:nth-child</code> CSS selector and is not available in IE7-IE8.</p>
+      <p class="muted"><strong>Note:</strong> Striped tables use the <code>:nth-child</code> CSS selector and is not available in IE7-IE8.</p>
 <pre class="prettyprint linenums" style="margin-bottom: 18px;">
 &lt;table class="table table-striped"&gt;
-  ...
+  …
 &lt;/table&gt;</pre>
     </div>
     <div class="span8">
@@ -625,7 +585,7 @@ get_header(); ?>
       <p>Add borders around the entire table and rounded corners for aesthetic purposes.</p>
 <pre class="prettyprint linenums">
 &lt;table class="table table-bordered"&gt;
-  ...
+  …
 &lt;/table&gt;</pre>
     </div>
     <div class="span8">
@@ -670,10 +630,10 @@ get_header(); ?>
   <h3>4. Condensed table</h3>
   <div class="row">
     <div class="span4">
-      <p>Make your tables more compact by adding the <code>.table-condensed</code> class to cut table cell padding in half (from 10px to 5px).</p>
+      <p>Make your tables more compact by adding the <code>.table-condensed</code> class to cut table cell padding in half (from 8px to 4px).</p>
 <pre class="prettyprint linenums" style="margin-bottom: 18px;">
 &lt;table class="table table-condensed"&gt;
-  ...
+  …
 &lt;/table&gt;</pre>
     </div>
     <div class="span8">
@@ -712,63 +672,17 @@ get_header(); ?>
 
 
 
-  <h3>5. Striped table w/ TableSorter.js</h3>
+  <h3>5. Combine them all!</h3>
   <div class="row">
     <div class="span4">
-      <p>Include the <a href="http://jquery.com">jQuery</a> <a href="http://tablesorter.com/docs/">Tablesorter</a> plugin and automaically get clear styles for sorted columns.</p>
-<pre class="prettyprint linenums">
-&lt;script src="jquery.tablesorter.js"&gt;&lt;/script&gt;
-&lt;script &gt;
-  $(function() {
-    $("table#sortTableExample")
-    .tablesorter({
-      sortList: [[1,0]]
-    });
-  });
-&lt;/script&gt;
-&lt;table class="table table-striped"&gt;
+      <p>Feel free to combine any of the table classes to achieve different looks by utilizing any of the available classes.</p>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped table-bordered table-condensed"&gt;
   ...
 &lt;/table&gt;</pre>
     </div>
     <div class="span8">
-      <table class="table table-striped tablesorter-example">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th class="yellow">First Name</th>
-            <th class="blue">Last Name</th>
-            <th class="green">Language</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>CSS</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>Javascript</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Stu</td>
-            <td>Dent</td>
-            <td>HTML</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Brosef</td>
-            <td>Stalin</td>
-            <td>HTML</td>
-          </tr>
-        </tbody>
-      </table>
-      <p>Styles for the Tablesorter, zebra striping, borders, and condensing may all compound in any variation to fit your needs.</p>
-      <table class="table table-striped table-bordered table-condensed tablesorter-example">
+      <table class="table table-striped table-bordered table-condensed">
         <thead>
           <tr>
             <th>#</th>
@@ -853,13 +767,8 @@ get_header(); ?>
     <tbody>
       <tr>
         <th>Vertical (default)</th>
-        <td><code>.vertical-form</code> <span class="muted">(not required)</span></td>
+        <td><code>.form-vertical</code> <span class="muted">(not required)</span></td>
         <td>Stacked, left-aligned labels over controls</td>
-      </tr>
-      <tr>
-        <th>Horizontal</th>
-        <td><code>.form-horizontal</code></td>
-        <td>Float left, right-aligned labels on same line as controls</td>
       </tr>
       <tr>
         <th>Inline</th>
@@ -871,35 +780,50 @@ get_header(); ?>
         <td><code>.form-search</code></td>
         <td>Extra-rounded text input for a typical search aesthetic</td>
       </tr>
+      <tr>
+        <th>Horizontal</th>
+        <td><code>.form-horizontal</code></td>
+        <td>Float left, right-aligned labels on same line as controls</td>
+      </tr>
     </tbody>
   </table>
 
 
   <h2>Example forms <small>using just form controls, no extra markup</small></h2>
+  <h3>Basic form</h3>
   <div class="row">
-    <div class="span4">
-      <h3>Basic form</h3>
+    <div class="span3">
       <p>With v2.0, we have lighter and smarter defaults for form styles. No extra markup, just form controls.</p>
+    </div>
+    <div class="span9">
       <form class="well">
         <label>Label name</label>
-        <input type="text" class="span3" placeholder="Type something...">
+        <input type="text" class="span3" placeholder="Type something…"> <span class="help-inline">Associated help text!</span>
         <label class="checkbox">
           <input type="checkbox"> Check me out
         </label>
         <button type="submit" class="btn">Submit</button>
       </form>
     </div>
-    <div class="span4">
-      <h3>Search form</h3>
+  </div> <!-- /row -->
+  <h3>Search form</h3>
+  <div class="row">
+    <div class="span3">
       <p>Reflecting default WebKit styles, just add <code>.form-search</code> for extra rounded search fields.</p>
+    </div>
+    <div class="span9">
       <form class="well form-search">
         <input type="text" class="input-medium search-query">
         <button type="submit" class="btn">Search</button>
       </form>
     </div>
-    <div class="span4">
-      <h3>Inline form</h3>
+  </div> <!-- /row -->
+  <h3>Inline form</h3>
+  <div class="row">
+    <div class="span3">
       <p>Inputs are block level to start. For <code>.form-inline</code> and <code>.form-horizontal</code>, we use inline-block.</p>
+    </div>
+    <div class="span9">
       <form class="well form-search">
         <input type="text" class="input-small" placeholder="Email">
         <input type="password" class="input-small" placeholder="Password">
@@ -914,82 +838,82 @@ get_header(); ?>
   <div class="row">
     <div class="span8">
       <form class="form-horizontal">
-        <legend>Controls Bootstrap supports</legend>
-        <fieldset class="control-group">
-          <label class="control-label" for="input01">Text input</label>
-          <div class="controls">
-            <input type="text" class="xlarge" name="input01">
-            <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
+        <fieldset>
+          <legend>Controls Bootstrap supports</legend>
+          <div class="control-group">
+            <label class="control-label" for="input01">Text input</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="optionsCheckbox">Checkbox</label>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" name="optionsCheckbox" value="option1">
-              Option one is this and that&mdash;be sure to include why it’s great
-            </label>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox">Checkbox</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="select01">Select list</label>
-          <div class="controls">
-            <select name="select01">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+          <div class="control-group">
+            <label class="control-label" for="select01">Select list</label>
+            <div class="controls">
+              <select id="select01">
+                <option>something</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="multiSelect">Multi-select</label>
-          <div class="controls">
-            <select multiple="multiple" name="multiSelect">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect">Multicon-select</label>
+            <div class="controls">
+              <select multiple="multiple" id="multiSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="fileInput">File input</label>
-          <div class="controls">
-            <input class="input-file" id="fileInput" name="fileInput" type="file">
+          <div class="control-group">
+            <label class="control-label" for="fileInput">File input</label>
+            <div class="controls">
+              <input class="input-file" id="fileInput" type="file">
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="textarea">Textarea</label>
-          <div class="controls">
-            <textarea class="input-xlarge" name="textarea" id="textarea" rows="3"></textarea>
+          <div class="control-group">
+            <label class="control-label" for="textarea">Textarea</label>
+            <div class="controls">
+              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-actions">
-          <button type="submit" class="btn primary">Save changes</button>
-          <button type="reset" class="btn">Cancel</button>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
         </fieldset>
       </form>
     </div>
     <div class="span4">
-      <div class="form-docs">
-        <h3>What's included</h3>
-        <p>Shown on the left are all the default form controls we support. Here's the bulleted list:</p>
-        <ul>
-          <li>text inputs (text, password, email, etc)</li>
-          <li>checkbox</li>
-          <li>radio</li>
-          <li>select</li>
-          <li>multiple select</li>
-          <li>file input</li>
-          <li>textarea</li>
-        </ul>
-        <hr>
-        <h3>New defaults with v2.0</h3>
-        <p>Up to v1.4, Bootstrap's default form styles used the horizontal layout. With Bootstrap 2, we removed that constraint to have smarter, more scalable defaults for any form.</p>
-      </div>
+      <h3>What's included</h3>
+      <p>Shown on the left are all the default form controls we support. Here's the bulleted list:</p>
+      <ul>
+        <li>text inputs (text, password, email, etc)</li>
+        <li>checkbox</li>
+        <li>radio</li>
+        <li>select</li>
+        <li>multiple select</li>
+        <li>file input</li>
+        <li>textarea</li>
+      </ul>
+      <hr>
+      <h3>New defaults with v2.0</h3>
+      <p>Up to v1.4, Bootstrap's default form styles used the horizontal layout. With Bootstrap 2, we removed that constraint to have smarter, more scalable defaults for any form.</p>
     </div>
   </div>
 
@@ -998,69 +922,88 @@ get_header(); ?>
   <div class="row">
     <div class="span8">
       <form class="form-horizontal">
-        <legend>Form control states</legend>
-        <fieldset class="control-group">
-          <label class="control-label" for="focusedInput">Focused input</label>
-          <div class="controls">
-            <input class="input-xlarge focused" id="focusedInput" name="focusedInput" type="text" value="This is focused...">
+        <fieldset>
+          <legend>Form control states</legend>
+          <div class="control-group">
+            <label class="control-label" for="focusedInput">Focused input</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="disabledInput">Disabled input</label>
-          <div class="controls">
-            <input class="input-xlarge disabled" id="disabledInput" name="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+          <div class="control-group">
+            <label class="control-label">Uneditable input</label>
+            <div class="controls">
+              <span class="input-xlarge uneditable-input">Some value here</span>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="optionsCheckbox">Disabled checkbox</label>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" name="optionsCheckbox" value="option1" disabled>
-              This is a disabled checkbox
-            </label>
+          <div class="control-group">
+            <label class="control-label" for="disabledInput">Disabled input</label>
+            <div class="controls">
+              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group warning">
-          <label class="control-label" for="inputError">Input with warning</label>
-          <div class="controls">
-            <input type="text" name="inputError">
-            <span class="help-inline">Something may have gone wrong</span>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled>
+                This is a disabled checkbox
+              </label>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group error">
-          <label class="control-label" for="inputError">Input with error</label>
-          <div class="controls">
-            <input type="text" name="inputError">
-            <span class="help-inline">Please correct the error</span>
+          <div class="control-group warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <div class="controls">
+              <input type="text" id="inputWarning">
+              <span class="help-inline">Something may have gone wrong</span>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group success">
-          <label class="control-label" for="inputError">Input with success</label>
-          <div class="controls">
-            <input type="text" name="inputError">
-            <span class="help-inline">Woohoo!</span>
+          <div class="control-group error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <div class="controls">
+              <input type="text" id="inputError">
+              <span class="help-inline">Please correct the error</span>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-actions">
-          <button type="submit" class="btn primary">Save changes</button>
-          <button type="reset" class="btn">Cancel</button>
+          <div class="control-group success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <div class="controls">
+              <input type="text" id="inputSuccess">
+              <span class="help-inline">Woohoo!</span>
+            </div>
+          </div>
+          <div class="control-group success">
+            <label class="control-label" for="selectError">Select with success</label>
+            <div class="controls">
+              <select id="selectError">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <span class="help-inline">Woohoo!</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
         </fieldset>
       </form>
     </div>
     <div class="span4">
-      <div class="form-docs">
-        <h3>Redesigned browser states</h3>
-        <p>Bootstrap features styles for browser-supported focused and <code>disabled</code> states. We remove the default Webkit <code>outline</code> and apply a <code>box-shadow</code> in it's place for <code>:focus</code>.</p>
-        <hr>
-        <h3>Form validation</h3>
-        <p>It also includes validation styles for errors, warnings, and success. To use, add the a class to the surrounding <code>.control-group</code>.</p>
+      <h3>Redesigned browser states</h3>
+      <p>Bootstrap features styles for browser-supported focused and <code>disabled</code> states. We remove the default Webkit <code>outline</code> and apply a <code>box-shadow</code> in it's place for <code>:focus</code>.</p>
+      <hr>
+      <h3>Form validation</h3>
+      <p>It also includes validation styles for errors, warnings, and success. To use, add the error class to the surrounding <code>.control-group</code>.</p>
 <pre class="prettyprint linenums">
 &lt;fieldset
   class="control-group error"&gt;
-  ...
+  …
 &lt;/fieldset&gt;
 </pre>
-      </div>
     </div>
   </div>
 
@@ -1069,102 +1012,131 @@ get_header(); ?>
   <div class="row">
     <div class="span8">
       <form class="form-horizontal">
-        <legend>Extending form controls</legend>
-        <fieldset class="control-group">
-          <label class="control-label">Form sizes</label>
-          <div class="controls docs-input-sizes">
-            <input class="span2" type="text" name="" placeholder=".span2">
-            <input class="span3" type="text" name="" placeholder=".span3">
-            <input class="span4" type="text" name="" placeholder=".span4">
-            <p class="help-block">Use the same <code>.span*</code> classes from the grid system for input sizes.</p>
-          </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="prependedInput">Prepended text</label>
-          <div class="controls">
-            <div class="input-prepend">
-              <span class="add-on">@</span>
-              <input class="span2" id="prependedInput" name="prependedInput" size="16" type="text">
+        <fieldset>
+          <legend>Extending form controls</legend>
+          <div class="control-group">
+            <label class="control-label">Form sizes</label>
+            <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+              <select class="span1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <p class="help-block">Use the same <code>.span*</code> classes from the grid system for input sizes.</p>
             </div>
-            <p class="help-block">Here's some help text</p>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="appendedInput">Appended text</label>
-          <div class="controls">
-            <div class="input-append">
-              <input class="span2" id="appendedInput" name="appendedInput" size="16" type="text">
-              <span class="add-on">.00</span>
+          <div class="control-group">
+            <label class="control-label" for="prependedInput">Prepended text</label>
+            <div class="controls">
+              <div class="input-prepend">
+                <span class="add-on">@</span>
+                <input class="span2" id="prependedInput" size="16" type="text">
+              </div>
+              <p class="help-block">Here's some help text</p>
             </div>
-            <p class="help-block">Here's more help text</p>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="inlineCheckboxes">Inline checkboxes</label>
-          <div class="controls">
-            <label class="checkbox inline">
-              <input type="checkbox" name="inlineCheckbox1" value="option1"> 1
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" name="inlineCheckbox1" value="option1"> 2
-            </label>
-            <label class="checkbox inline">
-              <input type="checkbox" name="inlineCheckbox1" value="option1"> 3
-            </label>
+          <div class="control-group">
+            <label class="control-label" for="appendedInput">Appended text</label>
+            <div class="controls">
+              <div class="input-append">
+                <input class="span2" id="appendedInput" size="16" type="text">
+                <span class="add-on">.00</span>
+              </div>
+              <p class="help-block">Here's more help text</p>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="optionsCheckboxes">Checkboxes</label>
-          <div class="controls">
-            <label class="checkbox">
-              <input type="checkbox" name="optionsCheckboxes" value="option1">
-              Option one is this and that&mdash;be sure to include why it’s great
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="optionsCheckboxes" value="option2">
-              Option two can also be checked and included in form results
-            </label>
-            <label class="checkbox">
-              <input type="checkbox" name="optionsCheckboxes" value="option3">
-              Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results
-            </label>
-            <p class="help-text"><strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.</p>
+          <div class="control-group">
+            <label class="control-label" for="inlineCheckboxes">Inline checkboxes</label>
+            <div class="controls">
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+              </label>
+              <label class="checkbox inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+              </label>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="control-group">
-          <label class="control-label" for="optionsRadios">Radio buttons</label>
-          <div class="controls">
-            <label class="radio">
-              <input type="radio" checked name="optionsRadios" value="option1">
-              Option one is this and that&mdash;be sure to include why it’s great
-            </label>
-            <label class="radio">
-              <input type="radio" name="optionsRadios" value="option2">
-              Option two can is something else and selecting it will deselect option one
-            </label>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckboxList">Checkboxes</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList1" value="option1">
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList2" value="option2">
+                Option two can also be checked and included in form results
+              </label>
+              <label class="checkbox">
+                <input type="checkbox" name="optionsCheckboxList3" value="option3">
+                Option three can&mdash;yes, you guessed it&mdash;also be checked and included in form results
+              </label>
+              <p class="help-block"><strong>Note:</strong> Labels surround all the options for much larger click areas and a more usable form.</p>
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="form-actions">
-          <button type="submit" class="btn primary">Save changes</button>
-          <button type="reset" class="btn">Cancel</button>
+          <div class="control-group">
+            <label class="control-label">Radio buttons</label>
+            <div class="controls">
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                Option one is this and that&mdash;be sure to include why it's great
+              </label>
+              <label class="radio">
+                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can is something else and selecting it will deselect option one
+              </label>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="reset" class="btn">Cancel</button>
+          </div>
         </fieldset>
       </form>
     </div>
     <div class="span4">
-      <div class="form-docs">
-        <h3>Prepend &amp; append inputs</h3>
-        <p>Input groups&mdash;with appended or prepended text&mdash;provide an easy way to give more context for your inputs. Great examples include the @ sign for Twitter usernames or $ for finances.</p>
-        <hr>
-        <h3>Checkboxes and radios</h3>
-        <p>Up to v1.4, Bootstrap required extra markup around checkboxes and radios to stack them. Now, it's a simple matter of repeating the <code>&lt;label class="checkbox"&gt;</code> that wraps the <code>&lt;input type="checkbox"&gt;</code>.</p>
-        <p>Inline checkboxes and radios are also supported. Just add <code>.inline</code> to any <code>.checkbox</code> or <code>.radio</code> and you're done.</p>
-      </div>
+      <h3>Prepend &amp; append inputs</h3>
+      <p>Input groups&mdash;with appended or prepended text&mdash;provide an easy way to give more context for your inputs. Great examples include the @ sign for Twitter usernames or $ for finances.</p>
+      <hr>
+      <h3>Checkboxes and radios</h3>
+      <p>Up to v1.4, Bootstrap required extra markup around checkboxes and radios to stack them. Now, it's a simple matter of repeating the <code>&lt;label class="checkbox"&gt;</code> that wraps the <code>&lt;input type="checkbox"&gt;</code>.</p>
+      <p>Inline checkboxes and radios are also supported. Just add <code>.inline</code> to any <code>.checkbox</code> or <code>.radio</code> and you're done.</p>
+      <hr>
+      <h4>Inline forms and append/prepend</h4>
+      <p>To use prepend or append inputs in an inline form, be sure to place the <code>.add-on</code> and <code>input</code> on the same line, without spaces.</p>
+      <hr>
+      <h4>Form help text</h4>
+      <p>To add help text for your form inputs, include inline help text with <code>&lt;span class="help-inline"&gt;</code> or a help text block with <code>&lt;p class="help-block"&gt;</code> after the input element.</p>
     </div>
   </div><!-- /row -->
 </section>
 
 
 
+<!-- Buttons
+================================================== -->
 <section id="buttons">
   <div class="page-header">
     <h1>Buttons</h1>
@@ -1184,23 +1156,28 @@ get_header(); ?>
         <td>Standard gray button with gradient</td>
       </tr>
       <tr>
-        <td><a class="btn primary" href="#">Primary</a></td>
-        <td><code>.primary</code></td>
+        <td><a class="btn btn-primary" href="#">Primary</a></td>
+        <td><code>.btn-primary</code></td>
         <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
       </tr>
       <tr>
-        <td><a class="btn info" href="#">Info</a></td>
-        <td><code>.info</code></td>
+        <td><a class="btn btn-info" href="#">Info</a></td>
+        <td><code>.btn-info</code></td>
         <td>Used as an alternate to the default styles</td>
       </tr>
       <tr>
-        <td><a class="btn success" href="#">Success</a></td>
-        <td><code>.success</code></td>
+        <td><a class="btn btn-success" href="#">Success</a></td>
+        <td><code>.btn-success</code></td>
         <td>Indicates a successful or positive action</td>
       </tr>
       <tr>
-        <td><a class="btn danger" href="#">Danger</a></td>
-        <td><code>.danger</code></td>
+        <td><a class="btn btn-warning" href="#">Warning</a></td>
+        <td><code>.btn-warning</code></td>
+        <td>Indicates caution should be taken with this action</td>
+      </tr>
+      <tr>
+        <td><a class="btn btn-danger" href="#">Danger</a></td>
+        <td><code>.btn-danger</code></td>
         <td>Indicates a dangerous or potentially negative action</td>
       </tr>
     </tbody>
@@ -1213,7 +1190,7 @@ get_header(); ?>
     </div>
     <div class="span4">
       <h3>For anchors and forms</h3>
-      <p>Button styles can be applied to anything with the <code>.btn</code> applied. However, typically you’ll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements.</p>
+      <p>Button styles can be applied to anything with the <code>.btn</code> applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements.</p>
     </div>
     <div class="span4">
       <p><strong>Note:</strong> All buttons must include the <code>.btn</code> class. Button styles should be applied to <code>&lt;button&gt;</code> and <code>&lt;a&gt;</code> elements for consistency.</p>
@@ -1225,24 +1202,30 @@ get_header(); ?>
       <h3>Multiple sizes</h3>
       <p>Fancy larger or smaller buttons? Have at it!</p>
       <p>
-        <a href="#" class="btn large primary">Primary action</a>
-        <a href="#" class="btn large">Action</a>
+        <a href="#" class="btn btn-large btn-primary">Primary action</a>
+        <a href="#" class="btn btn-large">Action</a>
       </p>
       <p>
-        <a href="#" class="btn small primary">Primary action</a>
-        <a href="#" class="btn small">Action</a>
+        <a href="#" class="btn btn-small btn-primary">Primary action</a>
+        <a href="#" class="btn btn-small">Action</a>
       </p>
     </div>
-    <div class="span8">
+    <div class="span4">
       <h3>Disabled state</h3>
-      <p>For buttons that are not active or are disabled by the app for one reason or another, use the disabled state. That’s <code>.disabled</code> for links and <code>:disabled</code> for <code>&lt;button&gt;</code> elements.</p>
+      <p>For disabled buttons, use <code>.btn-disabled</code> for links and <code>:disabled</code> for <code>&lt;button&gt;</code> elements.</p>
       <p>
-        <a href="#" class="btn large primary disabled">Primary action</a>
-        <a href="#" class="btn large disabled">Action</a>
+        <a href="#" class="btn btn-large btn-primary disabled">Primary action</a>
+        <a href="#" class="btn btn-large disabled">Action</a>
       </p>
       <p>
-        <button class="btn large primary disabled" disabled="disabled">Primary action</button>&nbsp;<button class="btn large" disabled>Action</button>
+        <button class="btn btn-large btn-primary disabled" disabled="disabled">Primary action</button>
+        <button class="btn btn-large" disabled>Action</button>
       </p>
+    </div>
+    <div class="span4">
+      <h3>Cross browser compatibility</h3>
+      <p>In IE9, we drop the gradient on all buttons in favor of rounded corners as IE9 doesn't crop background gradients to the corners.</p>
+      <p>Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow&mdash;unfortunately we can't fix this.</p>
     </div>
   </div>
 
@@ -1259,119 +1242,149 @@ get_header(); ?>
     <h1>Icons <small>Graciously provided by <a href="http://glyphicons.com" target="_blank">Glyphicons</a></small></h1>
   </div>
   <div class="row">
-    <div class="span2">
+    <div class="span3">
       <div class="the-icons">
-        <i class="glass"></i>
-        <i class="music"></i>
-        <i class="search"></i>
-        <i class="envelope"></i>
-        <i class="heart"></i>
-        <i class="star"></i>
-        <i class="star-empty"></i>
-        <i class="user"></i>
-        <i class="film"></i>
-        <i class="th-large"></i>
-        <i class="th"></i>
-        <i class="th-list"></i>
-        <i class="ok"></i>
-        <i class="remove"></i>
-        <i class="zoom-in"></i>
-        <i class="zoom-out"></i>
-        <i class="off"></i>
-        <i class="signal"></i>
-        <i class="cog"></i>
-        <i class="trash"></i>
+        <i class="icon-glass"></i>
+        <i class="icon-music"></i>
+        <i class="icon-search"></i>
+        <i class="icon-envelope"></i>
+        <i class="icon-heart"></i>
+        <i class="icon-star"></i>
+        <i class="icon-star-empty"></i>
+        <i class="icon-user"></i>
+        <i class="icon-film"></i>
+        <i class="icon-th-large"></i>
+        <i class="icon-th"></i>
+        <i class="icon-th-list"></i>
+        <i class="icon-ok"></i>
+        <i class="icon-remove"></i>
+        <i class="icon-zoom-in"></i>
+        <i class="icon-zoom-out"></i>
+        <i class="icon-off"></i>
+        <i class="icon-signal"></i>
+        <i class="icon-cog"></i>
+        <i class="icon-trash"></i>
+
+        <i class="icon-home"></i>
+        <i class="icon-file"></i>
+        <i class="icon-time"></i>
+        <i class="icon-road"></i>
+        <i class="icon-download-alt"></i>
+        <i class="icon-download"></i>
+        <i class="icon-upload"></i>
+        <i class="icon-inbox"></i>
+        <i class="icon-play-circle"></i>
+        <i class="icon-repeat"></i>
       </div>
     </div>
-    <div class="span2">
+    <div class="span3">
       <div class="the-icons">
-        <i class="home"></i>
-        <i class="file"></i>
-        <i class="time"></i>
-        <i class="road"></i>
-        <i class="download-alt"></i>
-        <i class="download"></i>
-        <i class="upload"></i>
-        <i class="inbox"></i>
-        <i class="play-circle"></i>
-        <i class="repeat"></i>
-        <i class="refresh"></i>
-        <i class="calendar"></i>
-        <i class="lock"></i>
-        <i class="flag"></i>
-        <i class="headphones"></i>
-        <i class="volume-off"></i>
-        <i class="volume-down"></i>
-        <i class="volume-up"></i>
-        <i class="qrcode"></i>
-        <i class="barcode"></i>
+        <i class="icon-refresh"></i>
+        <i class="icon-list-alt"></i>
+        <i class="icon-lock"></i>
+        <i class="icon-flag"></i>
+        <i class="icon-headphones"></i>
+        <i class="icon-volume-off"></i>
+        <i class="icon-volume-down"></i>
+        <i class="icon-volume-up"></i>
+        <i class="icon-qrcode"></i>
+        <i class="icon-barcode"></i>
+
+        <i class="icon-tag"></i>
+        <i class="icon-tags"></i>
+        <i class="icon-book"></i>
+        <i class="icon-bookmark"></i>
+        <i class="icon-print"></i>
+        <i class="icon-camera"></i>
+        <i class="icon-font"></i>
+        <i class="icon-bold"></i>
+        <i class="icon-italic"></i>
+        <i class="icon-text-height"></i>
+        <i class="icon-text-width"></i>
+        <i class="icon-align-left"></i>
+        <i class="icon-align-center"></i>
+        <i class="icon-align-right"></i>
+        <i class="icon-align-justify"></i>
+        <i class="icon-list"></i>
+        <i class="icon-indent-left"></i>
+        <i class="icon-indent-right"></i>
+        <i class="icon-facetime-video"></i>
+        <i class="icon-picture"></i>
       </div>
     </div>
-    <div class="span2">
+    <div class="span3">
       <div class="the-icons">
-        <i class="tag"></i>
-        <i class="tags"></i>
-        <i class="book"></i>
-        <i class="bookmark"></i>
-        <i class="print"></i>
-        <i class="camera"></i>
-        <i class="font"></i>
-        <i class="bold"></i>
-        <i class="italic"></i>
-        <i class="text-height"></i>
-        <i class="text-width"></i>
-        <i class="align-left"></i>
-        <i class="align-center"></i>
-        <i class="align-right"></i>
-        <i class="align-justify"></i>
-        <i class="list"></i>
-        <i class="indent-left"></i>
-        <i class="indent-right"></i>
-        <i class="facetime-video"></i>
-        <i class="picture"></i>
+        <i class="icon-pencil"></i>
+        <i class="icon-map-marker"></i>
+        <i class="icon-adjust"></i>
+        <i class="icon-tint"></i>
+        <i class="icon-edit"></i>
+        <i class="icon-share"></i>
+        <i class="icon-check"></i>
+        <i class="icon-move"></i>
+        <i class="icon-step-backward"></i>
+        <i class="icon-fast-backward"></i>
+        <i class="icon-backward"></i>
+        <i class="icon-play"></i>
+        <i class="icon-pause"></i>
+        <i class="icon-stop"></i>
+        <i class="icon-forward"></i>
+        <i class="icon-fast-forward"></i>
+        <i class="icon-step-forward"></i>
+        <i class="icon-eject"></i>
+        <i class="icon-chevron-left"></i>
+        <i class="icon-chevron-right"></i>
+
+        <i class="icon-plus-sign"></i>
+        <i class="icon-minus-sign"></i>
+        <i class="icon-remove-sign"></i>
+        <i class="icon-ok-sign"></i>
+        <i class="icon-question-sign"></i>
+        <i class="icon-info-sign"></i>
+        <i class="icon-screenshot"></i>
+        <i class="icon-remove-circle"></i>
+        <i class="icon-ok-circle"></i>
+        <i class="icon-ban-circle"></i>
       </div>
     </div>
-    <div class="span2">
+    <div class="span3">
       <div class="the-icons">
-        <i class="pencil"></i>
-        <i class="map-marker"></i>
-        <i class="adjust"></i>
-        <i class="tint"></i>
-        <i class="edit"></i>
-        <i class="share"></i>
-        <i class="check"></i>
-        <i class="move"></i>
-        <i class="step-backward"></i>
-        <i class="fast-backward"></i>
-        <i class="backward"></i>
-        <i class="play"></i>
-        <i class="pause"></i>
-        <i class="stop"></i>
-        <i class="forward"></i>
-        <i class="fast-forward"></i>
-        <i class="step-forward"></i>
-        <i class="eject"></i>
-        <i class="chevron-left"></i>
-        <i class="chevron-right"></i>
+        <i class="icon-arrow-left"></i>
+        <i class="icon-arrow-right"></i>
+        <i class="icon-arrow-up"></i>
+        <i class="icon-arrow-down"></i>
+        <i class="icon-share-alt"></i>
+        <i class="icon-resize-full"></i>
+        <i class="icon-resize-small"></i>
+        <i class="icon-plus"></i>
+        <i class="icon-minus"></i>
+        <i class="icon-asterisk"></i>
+
+        <i class="icon-exclamation-sign"></i>
+        <i class="icon-gift"></i>
+        <i class="icon-leaf"></i>
+        <i class="icon-fire"></i>
+        <i class="icon-eye-open"></i>
+        <i class="icon-eye-close"></i>
+        <i class="icon-warning-sign"></i>
+        <i class="icon-plane"></i>
+        <i class="icon-calendar"></i>
+        <i class="icon-random"></i>
+        <i class="icon-comment"></i>
+        <i class="icon-magnet"></i>
+        <i class="icon-chevron-up"></i>
+        <i class="icon-chevron-down"></i>
+        <i class="icon-retweet"></i>
+        <i class="icon-shopping-cart"></i>
+        <i class="icon-folder-close"></i>
+        <i class="icon-folder-open"></i>
+        <i class="icon-resize-vertical"></i>
+        <i class="icon-resize-horizontal"></i>
       </div>
     </div>
-    <div class="span2">
-      <div class="the-icons">
-        <i class="arrow-left"></i>
-        <i class="arrow-right"></i>
-        <i class="arrow-up"></i>
-        <i class="arrow-down"></i>
-        <i class="share"></i>
-        <i class="resize-full"></i>
-        <i class="resize-small"></i>
-        <i class="plus"></i>
-        <i class="minus"></i>
-        <i class="asterisk"></i>
-      </div>
-    </div>
-    <div class="span2">
-      <p class="muted">Light red background color is only used to show the dimensions of the icons in the docs.</p>
-    </div>
+  </div>
+  <div class="alert alert-info">
+    <strong>Heads up!</strong> Icon classes are echoed via CSS <code>:after</code>. In the docs, we show a light red background color on hover to hightlight the icon's size.
   </div>
 
   <br>
@@ -1380,22 +1393,27 @@ get_header(); ?>
     <div class="span4">
       <h3>Built as a sprite</h3>
       <p>Instead of making every icon an extra request, we've compiled them into a sprite&mdash;a bunch of images in one file that uses CSS to position the images with <code>background-position</code>. This is the same method we use on Twitter.com and it has worked well for us.</p>
-      <p><a href="http://glyphicons.com" target="_blank">Glyphicons</a> has granted us use of the Halflings set in our open-source toolkit so long as we provide a link and credit. Please consider doing the same in your projects.</p>
+      <p>All icons classes are prefixed with <code>.icon-</code> for proper namespacing and scoping, much like our other components. This will help avoid conflicts with other tools.</p>
+      <p><a href="http://glyphicons.com" target="_blank">Glyphicons</a> has granted us use of the Halflings set in our open-source toolkit so long as we provide a link and credit here in the docs. Please consider doing the same in your projects.</p>
     </div>
     <div class="span4">
       <h3>How to use</h3>
-      <p>With v2.0.0, the <code>&lt;i&gt;</code> tag is essentially dedicated to iconography. To use the icons, you can place the follow code wherever you like one to appear:</p>
+      <p>With v2.0.0, we have opted to use an <code>&lt;i&gt;</code> tag for all our icons, but they have no case class&mdash;only a shared prefix. To use, place the following code just about anywhere:</p>
 <pre class="prettyprint linenums">
-&lt;i class="chevron-left"&gt;&lt;/i&gt;
+&lt;i class="icon-search"&gt;&lt;/i&gt;
 </pre>
-      <p>There are over 100 classes to choose from for your icons. Just add an <code>&lt;i&gt;</code> tag with the right class and you're set. You can find the full list in sprites.less or right here in this document.</p>
+      <p>There are also styles available for inverted (white) icons, made ready with one extra class:</p>
+<pre class="prettyprint linenums">
+&lt;i class="icon-search icon-white"&gt;&lt;/i&gt;
+</pre>
+      <p>There are 120 classes to choose from for your icons. Just add an <code>&lt;i&gt;</code> tag with the right classes and you're set. You can find the full list in <strong>sprites.less</strong> or right here in this document.</p>
     </div>
     <div class="span4">
       <h3>Use cases</h3>
       <p>Icons are great, but where would one use them? Here are a few ideas:</p>
       <ul>
         <li>As visuals for your sidebar navigation</li>
-        <li>For a purely icon-driven nav</li>
+        <li>For a purely icon-driven navigation</li>
         <li>For buttons to help convey the meaning of an action</li>
         <li>With links to share context on a user's destination</li>
       </ul>
@@ -1404,39 +1422,65 @@ get_header(); ?>
   </div>
 
   <h3>Examples</h3>
+  <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
   <div class="row">
     <div class="span4">
-      <p>Use them in buttons, or in button groups for a toolbar style presentation.</p>
-      <p>
-        <a class="btn" href="#"><i class="refresh"></i> Refresh</a>
-        <a class="btn" href="#"><i class="cog"></i> Settings</a>
-      </p>
-      <div class="btn-toolbar">
+      <div class="btn-toolbar" style="margin-bottom: 9px">
         <div class="btn-group">
-          <a class="btn" href="#"><i class="font"></i></a>
-          <a class="btn" href="#"><i class="bold"></i></a>
-          <a class="btn" href="#"><i class="italic"></i></a>
+          <a class="btn" href="#"><i class="icon-align-left"></i></a>
+          <a class="btn" href="#"><i class="icon-align-center"></i></a>
+          <a class="btn" href="#"><i class="icon-align-right"></i></a>
+          <a class="btn" href="#"><i class="icon-align-justify"></i></a>
         </div>
         <div class="btn-group">
-          <a class="btn" href="#"><i class="align-left"></i></a>
-          <a class="btn" href="#"><i class="align-center"></i></a>
-          <a class="btn" href="#"><i class="align-right"></i></a>
-          <a class="btn" href="#"><i class="align-justify"></i></a>
+          <a class="btn btn-primary" href="#"><i class="icon white user"></i> User</a>
+          <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="i"></i> Make admin</a></li>
+          </ul>
         </div>
       </div>
+      <p>
+        <a class="btn" href="#"><i class="icon-refresh"></i> Refresh</a>
+        <a class="btn btn-success" href="#"><i class="icon-shopping-cart icon-white"></i> Checkout</a>
+        <a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i> Delete</a>
+      </p>
+      <p>
+        <a class="btn btn-large" href="#"><i class="icon-comment"></i> Comment</a>
+        <a class="btn btn-small" href="#"><i class="icon-cog"></i> Settings</a>
+        <a class="btn btn-small btn-info" href="#"><i class="icon-info-sign icon-white"></i> More Info</a>
+      </p>
     </div>
-    <div class="span3">
-      <p>Or, use them in navigation.</p>
+    <div class="span4">
       <div class="well" style="padding: 8px 0;">
-        <ul class="nav list">
-          <li class="active"><a href="#"><i class="home"></i> Home</a></li>
-          <li><a href="#"><i class="book"></i> Library</a></li>
-          <li><a href="#"><i class="pencil"></i> Applications</a></li>
+        <ul class="nav nav-list">
+          <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+          <li><a href="#"><i class="icon-book"></i> Library</a></li>
+          <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+          <li><a href="#"><i class="i"></i> Misc</a></li>
         </ul>
       </div> <!-- /well -->
     </div>
+    <div class="span4">
+      <form>
+        <div class="control-group">
+          <label class="control-label" for="inputIcon">Email address</label>
+          <div class="controls">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-envelope"></i></span>
+              <input class="span2" id="inputIcon" type="text">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </section>
+
 
 <?php endwhile; ?>
       

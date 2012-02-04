@@ -34,6 +34,12 @@ jQuery('a.dropdown-toggle')
 .attr('data-toggle', 'dropdown');
   });
 </script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+ jQuery('#navbar').scrollspy()
+  jQuery('.subnav').scrollspy()
+  });
+</script>
   <script type="text/javascript">
 jQuery(document).ready(function(){
  // Loaded for javascript Demo page - I prefer it when demos actually work, don't you?  //	
