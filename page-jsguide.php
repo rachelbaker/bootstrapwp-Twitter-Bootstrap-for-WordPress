@@ -1172,7 +1172,7 @@ $('#myCollapsible').on('hidden', function () {
         <div class="span3 columns">
           <h3>About</h3>
           <p>A generic plugin for cycling through elements. A merry-go-round.</p>
-          <a href="assets/js/bootstrap-carousel.js" target="_blank" class="btn">Download file</a>
+          <a href="js/bootstrap-carousel.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example carousel</h2>
@@ -1180,21 +1180,21 @@ $('#myCollapsible').on('hidden', function () {
           <div id="myCarousel" class="carousel slide">
             <div class="carousel-inner">
               <div class="item active">
-                <img src="assets/img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+                <img src="img/bootstrap-mdo-sfmoma-01.jpg" alt="">
                 <div class="carousel-caption">
                   <h4>First Thumbnail label</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 </div>
               </div>
               <div class="item">
-                <img src="assets/img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+                <img src="img/bootstrap-mdo-sfmoma-02.jpg" alt="">
                 <div class="carousel-caption">
                   <h4>Second Thumbnail label</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 </div>
               </div>
               <div class="item">
-                <img src="assets/img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+                <img src="img/bootstrap-mdo-sfmoma-03.jpg" alt="">
                 <div class="carousel-caption">
                   <h4>Third Thumbnail label</h4>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -1298,7 +1298,7 @@ $('.myCarousel').carousel({
         <div class="span3 columns">
           <h3>About</h3>
           <p>A basic, easily extended plugin for quickly creating elegant typeaheads with any form text input.</p>
-          <a href="assets/js/bootstrap-typeahead.js" target="_blank" class="btn">Download file</a>
+          <a href="js/bootstrap-typeahead.js" target="_blank" class="btn">Download file</a>
         </div>
         <div class="span9 columns">
           <h2>Example</h2>

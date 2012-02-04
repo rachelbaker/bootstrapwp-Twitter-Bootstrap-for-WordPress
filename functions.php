@@ -10,6 +10,8 @@
  * @package WordPress
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
+ * 
+ * Last Updated: February 3, 2012
  */
 
  /**

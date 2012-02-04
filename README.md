@@ -7,7 +7,9 @@ Version 1.0 Change Log
 
 * Added bootstrap-responsive.css to Functions.php style loading script
 * Updated CSS and JS files to Bootstrap 2 Final Release files 
-* 
+* Updated Javascript Guide Template
+* Removed "lib" folder and replaced with Bootstrap "less" folder
+
 
 **Latest version release: .7 (01/22/2012)**
 

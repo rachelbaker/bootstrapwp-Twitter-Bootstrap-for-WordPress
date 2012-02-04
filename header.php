@@ -52,14 +52,19 @@ get_header(); ?>
     <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png">
     <?php wp_head(); ?>
   </head>
-  <body <?php body_class(); ?>  onload="prettyPrint()">
+  <body <?php body_class(); ?>  onload="prettyPrint()"  data-spy="scroll" data-target=".subnav" data-offset="50">
 
 
-    <div class="navbar navbar-relative" data-scrollspy="scrollspy">
+    <div class="navbar navbar-relative">
       <div class="navbar-inner">
         <div class="container">
+           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
           <a class="brand" href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-          <?php wp_nav_menu( array( 'menu' => 'main-menu', 'container' => false, 'menu_class' => 'nav', 'menu_id' => 'main-menu') ); ?>
+          <?php wp_nav_menu( array( 'menu' => 'main-menu', 'container' => true, 'container_class' => 'nav-collapse', 'menu_class' => 'nav', 'menu_id' => 'main-menu') ); ?>
         </div>
       </div>
     </div>
