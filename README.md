@@ -7,12 +7,13 @@ Version 1.0 Change Log
 
 __Header.php__
 * Added body data attributes: data-spy="scroll" data-target=".subnav" data-offset="50" data-rendering="true"
+* Changed navbar class to Bootstrap default of "navbar-fixed-top"
 * Updated wp_nav_menu function array, added "'container' => 'div', 'container_class' => 'nav-collapse'," to provide div wrapper with proper class
 
 
 __Functions.php__
 * Added bootstrap-responsive.css to bootstrapwp_css_loader function
-* Added jquery.js to bootstrapwp_js_loader function
+* Added jquery.js to bootstrapwp_js_loader function and removed tablesorter.js
 
 __Page-JSGuide.php__
 * Updated Javascript Guide Template to match content from Bootstrap javascript.html file
@@ -24,6 +25,7 @@ __Footer.php__
 __Style.css__
 * Updated icon image location to match theme setup
 * Added .icon-white class with corrected image location
+* Removed over-ride of body padding to allow correct spacing with fixed navbar
 
 
 __Index.php__
@@ -35,6 +37,7 @@ __Other/Misc.__
 
 * Removed "lib" folder and replaced with Bootstrap "less" folder
 
+* Removed tablesorter.js file - as it is no longer used in Bootstrap 2.0
 
 
 **Latest version release: .7 (01/22/2012)**

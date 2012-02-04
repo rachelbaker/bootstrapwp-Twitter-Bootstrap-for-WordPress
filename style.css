@@ -18,10 +18,6 @@ Overriding some defaults from the Bootstrap defaults to improve/fix integration 
 
 /* Changing the navbar from 'fixed' to 'relative' to accomodate the WP-admin bar 
 ----------------------------------------------------------------------------------------*/
-	body {
-		padding-top: 0;
-	}
-
 .navbar-relative {
        position: relative;
        width: 100%;

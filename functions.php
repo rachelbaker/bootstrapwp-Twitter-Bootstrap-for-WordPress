@@ -35,7 +35,6 @@ if ( ! isset( $content_width ) )
  * Load Javascript for the Twitter Bootstrap JS Features - YOU SHOULD DISABLE ANY JS FILES YOU ARE NOT USING
  */
   function bootstrapwp_js_loader() {
-        wp_enqueue_script('jquery.js', get_template_directory_uri().'/js/jquery.js', array('jquery'),'1.4', true );
        wp_enqueue_script('prettify.js', get_template_directory_uri().'/js/prettify.js', array('jquery'),'1.0', true );
        wp_enqueue_script('transition.js', get_template_directory_uri().'/js/bootstrap-transition.js', array('jquery'),'1.0', true );
        wp_enqueue_script('alert.js', get_template_directory_uri().'/js/bootstrap-alert.js', array('jquery'),'1.0', true );
@@ -49,7 +48,8 @@ if ( ! isset( $content_width ) )
        wp_enqueue_script('collapse.js', get_template_directory_uri().'/js/bootstrap-collapse.js', array('jquery'),'1.0', true );        
        wp_enqueue_script('carousel.js', get_template_directory_uri().'/js/bootstrap-carousel.js', array('jquery'),'1.0', true );    
       wp_enqueue_script('typeahead.js', get_template_directory_uri().'/js/bootstrap-typeahead.js', array('jquery'),'1.0', true );
-          wp_enqueue_script('tablesorter.js', get_template_directory_uri().'/js/jquery.tablesorter.js', array('jquery'),'1.0', true );
+      wp_enqueue_script('application.js', get_template_directory_uri().'/js/application.js', array('tooltip.js'),'1.0', true );
+
       }
       add_action('wp_enqueue_scripts', 'bootstrapwp_js_loader');
 
