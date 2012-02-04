@@ -13,13 +13,14 @@ __Header.php__
 
 __Functions.php__
 * Added bootstrap-responsive.css to bootstrapwp_css_loader function
-* Added jquery.js to bootstrapwp_js_loader function and removed tablesorter.js
+* Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
 
 __Page-JSGuide.php__
 * Updated Javascript Guide Template to match content from Bootstrap javascript.html file
 
 __Footer.php__
-* Added jQuery onload function to allow scrollspy to work with the nav and subnav bars
+* Removed jQuery onload functions that are now all called in application.js
+* Added jQuery append function to automatically apply b class="caret" to dropdown menu items in navbar
 
 
 __Style.css__
@@ -38,6 +39,9 @@ __Other/Misc.__
 * Removed "lib" folder and replaced with Bootstrap "less" folder
 
 * Removed tablesorter.js file - as it is no longer used in Bootstrap 2.0
+
+* Removed wordpress.css file - as it is no longer used in Bootstrap 2.0
+
 
 
 **Latest version release: .7 (01/22/2012)**

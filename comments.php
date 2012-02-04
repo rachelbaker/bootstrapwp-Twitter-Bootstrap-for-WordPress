@@ -10,6 +10,8 @@
  * @package WordPress
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
+ * 
+ * Last Revised: February 4, 2012
  */
 ?>
 	<div id="comments">

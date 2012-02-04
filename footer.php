@@ -25,6 +25,7 @@ jQuery(document).ready(function(){
 jQuery("ul.sub-menu").parent().addClass("dropdown");
 jQuery("ul#main-menu li.dropdown a").addClass("dropdown-toggle");
 jQuery("ul.sub-menu li a").removeClass("dropdown-toggle"); 
+jQuery('.dropdown-toggle').append('<b class="caret"></b>');
   });
 </script>
 <script type="text/javascript">
