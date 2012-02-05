@@ -14,6 +14,8 @@ __Header.php__
 __Functions.php__
 * Added bootstrap-responsive.css to bootstrapwp_css_loader function
 * Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
+* Revised pagination section to use ul class="pager" instead of div id="pagination"
+
 
 __Page-JSGuide.php__
 * Updated Javascript Guide Template to match content from Bootstrap javascript.html file
@@ -27,6 +29,9 @@ __Style.css__
 * Updated icon image location to match theme setup
 * Added .icon-white class with corrected image location
 * Removed over-ride of body padding to allow correct spacing with fixed navbar
+* Added styles for comment form
+* Added color primary button colors for comment and search submit buttons
+
 
 
 __Index.php__
