@@ -8,6 +8,8 @@ BootstrapWP Development Change Log
 
 __Header.php__
 
+*	Changed title to <title><?php wp_title(''); ?></title> to allow for better integration with WordPress SEO plugin
+
 * Added body data attributes: data-spy="scroll" data-target=".subnav" data-offset="50" data-rendering="true"
 
 * Changed navbar class to Bootstrap default of "navbar-fixed-top"
