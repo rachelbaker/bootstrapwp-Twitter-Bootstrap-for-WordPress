@@ -3,42 +3,70 @@ Bootstrapwp - TWITTER BOOTSTRAP for WordPress
 
 Bootstrap is a responsive front-end toolkit from Twitter designed to kickstart web development, complete with core HTML, CSS, and JS for grids, type, forms, navigation, and many more components. Now you can use it with **WordPress** as a solid base to build custom themes quickly and easily.
 
-Version 1.0 Change Log
+BootstrapWP Development Change Log
+---
 
 __Header.php__
+
 * Added body data attributes: data-spy="scroll" data-target=".subnav" data-offset="50" data-rendering="true"
+
 * Changed navbar class to Bootstrap default of "navbar-fixed-top"
+
 * Updated wp_nav_menu function array, added "'container' => 'div', 'container_class' => 'nav-collapse'," to provide div wrapper with proper class
 
 
 __Functions.php__
+
 * Added bootstrap-responsive.css to bootstrapwp_css_loader function
+
 * Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
+
 * Revised pagination section to use ul class="pager" instead of div id="pagination"
+
+* Revised sidebars to use div element as widget wrapper instead of aside element
+
+* Changed widget titles to h4 instead of h3 elements
+
 
 
 __Page-JSGuide.php__
+
 * Updated Javascript Guide Template to match content from Bootstrap javascript.html file
 
 __Footer.php__
+
 * Removed jQuery onload functions that are now all called in application.js
+
 * Added jQuery append function to automatically apply b class="caret" to dropdown menu items in navbar
 
 
 __Style.css__
+
 * Updated icon image location to match theme setup
+
 * Added .icon-white class with corrected image location
+
 * Removed over-ride of body padding to allow correct spacing with fixed navbar
 * Added styles for comment form
+
 * Added color primary button colors for comment and search submit buttons
 
+* Added styling for sidebars and sidebar list items
+
+* Added .meta class for blog post meta information
 
 
-__Index.php__
-* Edited content on index.php template to directly correlate with index.html Bootstrap file
+
+__Single.php___
+
+*	Edited content on index.php template to directly correlate with index.html Bootstrap file
+
+*	Added bootstrapwp_posted_on function under post title
+
 
 
 __Other/Misc.__
+
 * Updated CSS and JS files to Bootstrap 2 Final Release files 
 
 * Removed "lib" folder and replaced with Bootstrap "less" folder
@@ -46,6 +74,9 @@ __Other/Misc.__
 * Removed tablesorter.js file - as it is no longer used in Bootstrap 2.0
 
 * Removed wordpress.css file - as it is no longer used in Bootstrap 2.0
+
+*	Updated screenshot.png file
+
 
 
 

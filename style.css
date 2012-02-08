@@ -192,6 +192,45 @@ white-space: nowrap;
   margin-right: auto;
 }
 
+/* Blog Post Specific Items
+----------------------------------------------------------------------------------------*/
+p.meta {
+  font-size: 11px;
+  line-height: 18px;
+  color: #999;
+}
+
+/* Sidebar
+----------------------------------------------------------------------------------------*/
+div.widget {
+  margin-bottom: 18px;
+}
+h4.widget-title {
+  font-weight: bold;
+  line-height: 18px;
+  color: #999;
+  text-transform: uppercase;
+  margin-top: 9px;
+}
+.widget ul {
+  margin: 0 0 9px 0;
+}
+.widget ul li {
+  list-style: none;
+}
+
+.widget ul > li > a {
+  display: block;
+  padding: 3px 15px;
+  margin-left: -15px;
+  margin-right: -15px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.widget ul > li > a:hover {
+color: white;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+background-color: #08C;
+}
 /* Post Styles
 ----------------------------------------------------------------------------------------*/
 sticky {

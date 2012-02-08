@@ -11,7 +11,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  * 
- * Last Updated: February 3, 2012
+ * Last Updated: February 7, 2012
  */
 
  /**
@@ -21,14 +21,14 @@ if ( ! isset( $content_width ) )
   $content_width = 620; /* pixels */
 
 /**
- * Load all CSS files in the currect order!
+ * Load all CSS files in the correct order!
  */
   function bootstrapwp_css_loader() {
     wp_enqueue_style('bootstrap.css', get_template_directory_uri().'/css/bootstrap.css', false ,'1.0', 'all' );
     wp_enqueue_style('responsive.css', get_template_directory_uri().'/css/bootstrap-responsive.css', false, '1.0', 'all' );
     wp_enqueue_style('docs.css', get_template_directory_uri().'/css/docs.css', false ,'1.0', 'all' );
     wp_enqueue_style('prettify.css', get_template_directory_uri().'/css/prettify.css', false ,'1.0', 'all' );
-  wp_enqueue_style('style.css', get_template_directory_uri().'/style.css', false ,'1.0', 'all' );
+    wp_enqueue_style('style.css', get_template_directory_uri().'/style.css', false ,'1.0', 'all' );
       }     
       add_action('wp_enqueue_scripts', 'bootstrapwp_css_loader');
 /**
@@ -41,15 +41,14 @@ if ( ! isset( $content_width ) )
        wp_enqueue_script('modal.js', get_template_directory_uri().'/js/bootstrap-modal.js', array('jquery'),'1.0', true );
        wp_enqueue_script('dropdown.js', get_template_directory_uri().'/js/bootstrap-dropdown.js', array('jquery'),'1.0', true );
        wp_enqueue_script('scrollspy.js', get_template_directory_uri().'/js/bootstrap-scrollspy.js', array('jquery'),'1.0', true );
-      wp_enqueue_script('tab.js', get_template_directory_uri().'/js/bootstrap-tab.js', array('jquery'),'1.0', true );
-      wp_enqueue_script('tooltip.js', get_template_directory_uri().'/js/bootstrap-tooltip.js', array('jquery'),'1.0', true );
-             wp_enqueue_script('popover.js', get_template_directory_uri().'/js/bootstrap-popover.js', array('tooltip.js'),'1.0', true );
+       wp_enqueue_script('tab.js', get_template_directory_uri().'/js/bootstrap-tab.js', array('jquery'),'1.0', true );
+       wp_enqueue_script('tooltip.js', get_template_directory_uri().'/js/bootstrap-tooltip.js', array('jquery'),'1.0', true );
+       wp_enqueue_script('popover.js', get_template_directory_uri().'/js/bootstrap-popover.js', array('tooltip.js'),'1.0', true );
        wp_enqueue_script('button.js', get_template_directory_uri().'/js/bootstrap-button.js', array('jquery'),'1.0', true );
        wp_enqueue_script('collapse.js', get_template_directory_uri().'/js/bootstrap-collapse.js', array('jquery'),'1.0', true );        
        wp_enqueue_script('carousel.js', get_template_directory_uri().'/js/bootstrap-carousel.js', array('jquery'),'1.0', true );    
       wp_enqueue_script('typeahead.js', get_template_directory_uri().'/js/bootstrap-typeahead.js', array('jquery'),'1.0', true );
       wp_enqueue_script('application.js', get_template_directory_uri().'/js/application.js', array('tooltip.js'),'1.0', true );
-
       }
       add_action('wp_enqueue_scripts', 'bootstrapwp_js_loader');
 
@@ -96,19 +95,19 @@ function bootstrapwp_widgets_init() {
 	register_sidebar( array(
 		'name' => 'Page Sidebar',
 		'id' => 'sidebar-page',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
 	) );
 
 	register_sidebar( array(
 		'name' => 'Posts Sidebar',
 		'id' => 'sidebar-posts',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => "</aside>",
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => "</div>",
+		'before_title' => '<h4 class="widget-title">',
+		'after_title' => '</h4>',
 	) );
 
   register_sidebar(array(
