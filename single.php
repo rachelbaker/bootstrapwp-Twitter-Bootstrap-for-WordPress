@@ -2,7 +2,7 @@
 /**
  * The template for displaying all posts.
  *
- * Template Name: Default Posts
+ * Default Post Template
  *
  * Page template with a fixed 940px container and right sidebar layout
  *

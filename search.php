@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Search Template
+ * Search Template
  *
  *
  * @package WP-Bootstrap

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Default Footer
+ * Default Footer
  *
  * @package WP-Bootstrap
  * @subpackage Default_Theme

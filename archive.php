@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-<?php query_posts( array( 'posts_per_page' => 5, 'paged' => get_query_var('paged') ) );
+<?php query_posts( array( 'posts_per_page' => 10, 'paged' => get_query_var('paged') ) );
 if (have_posts() ) ;?>
   <div class="row">
   <div class="container">
@@ -44,7 +44,7 @@ if (have_posts() ) ;?>
 	<?php while ( have_posts() ) : the_post(); ?>
 	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>	
 	<?php the_excerpt();?>
-	<div class="divider"></div>		
+	<hr />		
 
 				<?php endwhile; ?>
  <?php bootstrapwp_content_nav('nav-below');?>

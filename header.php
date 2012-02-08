@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * Template Name: Default Page Header
+ * Default Page Header
  *
  * @package WP-Bootstrap
  * @subpackage Default_Theme
@@ -50,6 +50,10 @@ get_header(); ?>
     <link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-touch-icon-114x114.png">
+
+  <!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->    
     <?php wp_head(); ?>
   </head>
   <body <?php body_class(); ?>  data-spy="scroll" data-target=".subnav" data-offset="50" onload="prettyPrint()">

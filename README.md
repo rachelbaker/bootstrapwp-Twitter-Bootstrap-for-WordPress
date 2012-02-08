@@ -63,7 +63,18 @@ __Single.php___
 
 *	Added bootstrapwp_posted_on function under post title
 
+__Page-simple.php__
 
+*	Created template for a simple page with right sidebar, no breadcrumbs or subhead masthead.
+
+
+__Author.php__
+
+*	Fixed formatting on this template file to match archive.php
+
+__Archive.php__
+
+*	Added hr element to seperate archive post listings
 
 __Other/Misc.__
 
@@ -76,6 +87,7 @@ __Other/Misc.__
 * Removed wordpress.css file - as it is no longer used in Bootstrap 2.0
 
 *	Updated screenshot.png file
+
 
 
 

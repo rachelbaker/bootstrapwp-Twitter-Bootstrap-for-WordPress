@@ -15,7 +15,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /********************************************************  
 Overriding some defaults from the Bootstrap defaults to improve/fix integration with WordPress
 -------------------------------------------------- */
-
+body {
+padding-top: 60px;
+}
 /* Changing the navbar from 'fixed' to 'relative' to accomodate the WP-admin bar 
 ----------------------------------------------------------------------------------------*/
 .navbar-relative {
