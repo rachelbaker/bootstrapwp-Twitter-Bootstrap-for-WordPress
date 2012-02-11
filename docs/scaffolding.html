@@ -7,16 +7,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
@@ -97,7 +97,7 @@
     <h1>Grid system <small>12 columns with a responsive twist</small></h1>
   </div>
 
-  <h2>Default 940px grid</h2>
+  <h2>Default grid</h2>
   <div class="row show-grid">
     <div class="span1">1</div>
     <div class="span1">1</div>
@@ -173,7 +173,8 @@
   <div class="row">
     <div class="span6">
       <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
-      <h4>Example</h4>
+      <h3>Example</h3>
+      <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
       <div class="row show-grid">
         <div class="span6">
           Level 1 of column
@@ -183,6 +184,21 @@
             </div>
             <div class="span3">
               Level 2
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Fluid example</h3>
+      <p>Nesting with fluid grids is a bit different: the number of nested columns doesn't need to match the parent. Instead, your columns are reset at each level because each row takes up 100% of the parent column.</p>
+      <div class="row-fluid show-grid">
+        <div class="span12">
+          Fluid 12
+          <div class="row-fluid show-grid">
+            <div class="span6">
+              Fluid 6
+            </div>
+            <div class="span6">
+              Fluid 6
             </div>
           </div>
         </div>
@@ -242,7 +258,7 @@
     </div>
     <div class="span4">
       <h3>How to customize</h3>
-      <p>Modifying the grid means changing the three <code>@grid*</code> variables and recompiling Bootstrap. Change the grid variables in variables.less and use one of the <a href="#compiling">four ways documented to recompile</a>. If you're adding more columns, be sure to add the CSS for those in grid.less.</p>
+      <p>Modifying the grid means changing the three <code>@grid*</code> variables and recompiling Bootstrap. Change the grid variables in variables.less and use one of the <a href="less.html#compiling">four ways documented to recompile</a>. If you're adding more columns, be sure to add the CSS for those in grid.less.</p>
     </div>
     <div class="span4">
       <h3>Staying responsive</h3>
@@ -315,7 +331,7 @@
     </div>
     <div class="span8">
       <h2>Supported devices</h2>
-      <p>Bootstrap supports a handful of media queries to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
+      <p>Bootstrap supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
@@ -339,7 +355,7 @@
           <tr>
             <td>Landscape tablets</td>
             <td>768px to 980px</td>
-            <td>44px</td>
+            <td>42px</td>
             <td>20px</td>
           </tr>
           <tr>
@@ -356,6 +372,10 @@
           </tr>
         </tbody>
       </table>
+
+      <h3>Requires meta tag</h3>
+      <p>To ensure devices display responsive pages properly, include the viewport meta tag.</p>
+      <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
 
       <h3>What they do</h3>
       <p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
@@ -377,7 +397,7 @@
       <ol>
         <li>Use the compiled responsive version, bootstrap-responsive.css</li>
         <li>Add @import "responsive.less" and recompile Bootstrap</li>
-        <li>Modify and recompile responsive.less as a separate</li>
+        <li>Modify and recompile responsive.less as a separate file</li>
       </ol>
       <p><strong>Why not just include it?</strong> Truth be told, not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it.</p>
     </div>
