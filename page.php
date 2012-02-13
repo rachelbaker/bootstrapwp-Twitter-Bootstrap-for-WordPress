@@ -3,8 +3,7 @@
  * The template for displaying all pages.
  *
  * Template Name: Default Page
- *
- * Page template with a fixed 940px container and right sidebar layout
+ * Description: Page template with a content container and right sidebar
  *
  * @package WordPress
  * @subpackage WP-Bootstrap

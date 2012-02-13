@@ -19,27 +19,33 @@ __Header.php__
 
 __Functions.php__
 
-* Added bootstrap-responsive.css to bootstrapwp_css_loader function
+*	Improved file structure and comments
 
-* Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
+*	Added bootstrap-responsive.css to bootstrapwp_css_loader function
 
-* Revised pagination section to use ul class="pager" instead of div id="pagination"
+*	Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
 
-* Revised sidebars to use div element as widget wrapper instead of aside element
+*	Revised pagination section to use ul class="pager" instead of div id="pagination"
 
-* Changed widget titles to h4 instead of h3 elements
+*	Revised sidebars to use div element as widget wrapper instead of aside element
 
+*	Changed widget titles to h4 instead of h3 elements
+
+*	Added catch_that_image function to grab the first image in blog posts
+
+*	Added support for post-thumbnails and added image sizes for Boostrap image thumbnails
 
 
 __Page-JSGuide.php__
 
-* Updated Javascript Guide Template to match content from Bootstrap javascript.html file
+*	Updated Javascript Guide Template to match content from Bootstrap javascript.html file
+
 
 __Footer.php__
 
-* Removed jQuery onload functions that are now all called in application.js
+*	Removed jQuery onload functions that are now all called in application.js
 
-* Added jQuery append function to automatically apply b class="caret" to dropdown menu items in navbar
+*	Added jQuery append function to automatically apply b class="caret" to dropdown menu items in navbar
 
 
 __Style.css__
@@ -65,18 +71,30 @@ __Single.php___
 
 *	Added bootstrapwp_posted_on function under post title
 
+
 __Page-simple.php__
 
 *	Created template for a simple page with right sidebar, no breadcrumbs or subhead masthead.
+
+
+__Page-blog.php__
+
+*	Created template for a main blog page with right sidebar.
+
+*	Added paging to blog template
+
+*	Displayed first image attached to blog posts using catch_that_image function
 
 
 __Author.php__
 
 *	Fixed formatting on this template file to match archive.php
 
+
 __Archive.php__
 
 *	Added hr element to seperate archive post listings
+
 
 __Other/Misc.__
 
@@ -89,8 +107,6 @@ __Other/Misc.__
 * Removed wordpress.css file - as it is no longer used in Bootstrap 2.0
 
 *	Updated screenshot.png file
-
-
 
 
 

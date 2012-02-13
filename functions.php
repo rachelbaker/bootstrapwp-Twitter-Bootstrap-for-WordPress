@@ -11,7 +11,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  * 
- * Last Updated: February 7, 2012
+ * Last Updated: February 12, 2012
  */
 
  /**
@@ -20,20 +20,22 @@
 if ( ! isset( $content_width ) )
   $content_width = 620; /* pixels */
 
-/**
- * Load all CSS files in the correct order!
- */
+################################################################################
+// Loading All CSS Stylesheets
+################################################################################
   function bootstrapwp_css_loader() {
     wp_enqueue_style('bootstrap.css', get_template_directory_uri().'/css/bootstrap.css', false ,'1.0', 'all' );
     wp_enqueue_style('responsive.css', get_template_directory_uri().'/css/bootstrap-responsive.css', false, '1.0', 'all' );
     wp_enqueue_style('docs.css', get_template_directory_uri().'/css/docs.css', false ,'1.0', 'all' );
     wp_enqueue_style('prettify.css', get_template_directory_uri().'/css/prettify.css', false ,'1.0', 'all' );
     wp_enqueue_style('style.css', get_template_directory_uri().'/style.css', false ,'1.0', 'all' );
-      }     
-      add_action('wp_enqueue_scripts', 'bootstrapwp_css_loader');
-/**
- * Load Javascript for the Twitter Bootstrap JS Features - YOU SHOULD DISABLE ANY JS FILES YOU ARE NOT USING
- */
+  }     
+add_action('wp_enqueue_scripts', 'bootstrapwp_css_loader');
+
+
+################################################################################
+// Loading all JS Script Files.  Remove any files you are not using!
+################################################################################
   function bootstrapwp_js_loader() {
        wp_enqueue_script('prettify.js', get_template_directory_uri().'/js/prettify.js', array('jquery'),'1.0', true );
        wp_enqueue_script('transition.js', get_template_directory_uri().'/js/bootstrap-transition.js', array('jquery'),'1.0', true );
@@ -49,32 +51,15 @@ if ( ! isset( $content_width ) )
        wp_enqueue_script('carousel.js', get_template_directory_uri().'/js/bootstrap-carousel.js', array('jquery'),'1.0', true );    
       wp_enqueue_script('typeahead.js', get_template_directory_uri().'/js/bootstrap-typeahead.js', array('jquery'),'1.0', true );
       wp_enqueue_script('application.js', get_template_directory_uri().'/js/application.js', array('tooltip.js'),'1.0', true );
-      }
-      add_action('wp_enqueue_scripts', 'bootstrapwp_js_loader');
+  }
+add_action('wp_enqueue_scripts', 'bootstrapwp_js_loader');
 
 
-
-/**
- * 
- * 
-* This theme uses wp_nav_menu() in one location.
-	 */
+################################################################################
+// Registering Top Navigation Bar
+################################################################################
 if ( function_exists( 'register_nav_menu' ) ) {
 register_nav_menu( 'main-menu', 'Main Menu' );
-}
-
-function bootstrapwp_theme_setup() {
-	/**
-	 * Add default posts and comments RSS feed links to head
-	 */
-	add_theme_support( 'automatic-feed-links' );
-
-	
-
-	/**
-	 * Add support for the Aside and Gallery Post Formats
-	 */
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
 }
 
 
@@ -82,33 +67,34 @@ function bootstrapwp_theme_setup() {
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
 function bootstrapwp_page_menu_args( $args ) {
-	$args['show_home'] = true;
-	return $args;
+  $args['show_home'] = true;
+  return $args;
 }
 add_filter( 'wp_page_menu_args', 'bootstrapwp_page_menu_args' );
 
 
-/**
- * Register widgetized area and update sidebar with default widgets
- */
-function bootstrapwp_widgets_init() {
-	register_sidebar( array(
-		'name' => 'Page Sidebar',
-		'id' => 'sidebar-page',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
+################################################################################
+// Registering Widget Sections
+################################################################################
 
-	register_sidebar( array(
-		'name' => 'Posts Sidebar',
-		'id' => 'sidebar-posts',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => "</div>",
-		'before_title' => '<h4 class="widget-title">',
-		'after_title' => '</h4>',
-	) );
+function bootstrapwp_widgets_init() {
+  register_sidebar( array(
+    'name' => 'Page Sidebar',
+    'id' => 'sidebar-page',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => "</div>",
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
+  ) );
+
+  register_sidebar( array(
+    'name' => 'Posts Sidebar',
+    'id' => 'sidebar-posts',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => "</div>",
+    'before_title' => '<h4 class="widget-title">',
+    'after_title' => '</h4>',
+  ) );
 
   register_sidebar(array(
     'name' => 'Home Left',
@@ -143,6 +129,33 @@ function bootstrapwp_widgets_init() {
 }
 add_action( 'init', 'bootstrapwp_widgets_init' );
 
+
+
+function bootstrapwp_theme_setup() {
+	/**
+	 * Add default posts and comments RSS feed links to head
+	 */
+	add_theme_support( 'automatic-feed-links' );
+
+	/**
+	 * Add support for the Aside and Gallery Post Formats
+	 */
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
+}
+
+
+################################################################################
+// Setting Image Sizes
+################################################################################
+if ( function_exists( 'add_theme_support' ) ) {
+  add_theme_support( 'post-thumbnails' );
+  set_post_thumbnail_size( 160, 120 ); // 160 pixels wide by 120 pixels high   
+}
+
+if ( function_exists( 'add_image_size' ) ) { 
+  add_image_size( 'bootstrap-small', 260, 180 ); // 260 pixels wide by 180 pixels high
+  add_image_size( 'bootstrap-medium', 360, 268 ); // 360 pixels wide by 268 pixels high
+}
 
 /**
  * Customize the excerpt with a filter to change the end to contain ...Continue Reading link
@@ -331,6 +344,31 @@ function bootstrapwp_enhanced_image_navigation( $url ) {
 	return $url;
 }
 add_filter( 'attachment_link', 'bootstrapwp_enhanced_image_navigation' );
+
+################################################################################
+// Grabbing the First Image in Posts
+################################################################################
+
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  $new_img_tag = "";
+
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches [1] [0];
+
+  if(empty($first_img)){ //Defines a default image with 0 width
+  $new_img_tag = "<img src='/images/noimage.jpg' width='0px' class='alignright' />";
+  }
+
+  else{
+  $new_img_tag = "<img src='" .  $first_img . "' width='160px' height='120px' class='thumbnail' />";
+  }
+
+  return $new_img_tag;
+  }
 
 /**
  * Adding Breadcrumbs
