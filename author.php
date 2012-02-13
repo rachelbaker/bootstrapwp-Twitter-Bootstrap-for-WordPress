@@ -40,14 +40,23 @@ get_header(); ?>
 				?>
 
 				
- <div class="row content">
-<div class="span8">
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+	<div class="row content">
+		<div class="span8">
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-	<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>	
-	<?php the_excerpt();?>
-	<hr />		
+				<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h3><?php the_title();?></h3></a>
+				<p class="meta"><?php echo bootstrapwp_posted_on();?></p>
+             <div class="row">              
+                <div class="span2">
+                  <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+                  <?php echo catch_that_image();?></a>
+                </div><!-- /.span2 -->
+                <div class="span6">
+                 <?php the_excerpt();?>
+                </div><!-- /.span6 -->
+             </div><!-- /.row -->   
+                <hr />  
 
 				<?php endwhile; ?>
 

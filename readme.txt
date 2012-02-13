@@ -7,11 +7,17 @@
 * Replaced bootstrap-twipsy.js file with NEW bootstrap-tooltip.js file
 * Modified enqueue_style order, and added style.css to the function to ensure it would be loaded last.
 * Moved all Bootstrap documentation styles to their own docs.css file, and reserved styles.css for WordPress related modifications
-* Created template for Javascript Demo page, needed onload scripts for page to work were added in footer.php
+* Created template for Javascript Demo page, needed onload scripts for Demo page were added in footer.php
 * Moved Style Guide to it's own template file
 * Moved Assets folder to root of theme folder with images folder
 * Any added custom styles can now be found in style.css file
-* Added custom jQuery to footer.php to allow the WordPress custom menus to work with the Bootstrap dropdown styles/js files.  
+* Added custom jQuery to footer.php to allow the WordPress custom menus to work with the Bootstrap dropdown styles/js files.
+* Removed Custom Walker Class from navigation menu.  It is not needed, with jQuery adding the needed class changes instead.
+* Added image alignments (.alignleft, .alignright, .aligncenter) styles to styles.css
+* Added styles to 404.php template file
+* Added styles to search.php template file
+* Added search form styles to style.css file
+* Added $content_width declaration to functions.php
 
 
 

@@ -20,7 +20,7 @@ get_header(); ?>
          <p>Bootstrap is a simple and flexible HTML, CSS, and Javascript for popular user interface components and interactions.</p> 
          <p>Now you can use it with <strong>WordPress</strong> as a solid base for theme development, to build custom themes quickly and easily.</p>
          <p class="download-info">
-              <a href="https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress" class="btn btn-primary btn-large">Download on GitHub</a> Version .7</p>
+              <a href="https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress" class="btn btn-primary btn-large">Download on GitHub</a> Version .8</p>
              <p class="download-info">
             <a href="https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/tree/2.0-update" class="btn btn-large">Download the Development Branch</a>
               Version 1.0 - in-process</p>
