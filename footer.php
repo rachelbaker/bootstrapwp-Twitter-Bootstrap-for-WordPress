@@ -44,6 +44,7 @@ jQuery(function () {
         jQuery('.dropdown-toggle').dropdown();
       })
   });
+});
 </script>
   </body>
 </html>
