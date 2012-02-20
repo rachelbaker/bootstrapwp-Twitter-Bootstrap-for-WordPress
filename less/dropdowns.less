@@ -46,7 +46,6 @@
   float: left;
   display: none; // none by default, but block on "open" of the menu
   min-width: 160px;
-  _width: 160px;
   padding: 4px 0;
   margin: 0; // override default ul
   list-style: none;
@@ -121,6 +120,12 @@
   .dropdown-menu {
     display: block;
   }
+}
+
+// Right aligned dropdowns
+.pull-right .dropdown-menu {
+  left: auto;
+  right: 0;
 }
 
 // Typeahead

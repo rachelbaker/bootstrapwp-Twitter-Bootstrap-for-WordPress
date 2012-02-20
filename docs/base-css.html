@@ -166,7 +166,8 @@
           Wraps abbreviations and acronyms to show the expanded version on hover
         </td>
         <td>
-          Include optional <code>title</code> for expanded text
+          <p>Include optional <code>title</code> attribute for expanded text</p>
+          Use <code>.initialism</code> class for uppercase abbreviations.
         </td>
       </tr>
       <tr>
@@ -205,8 +206,9 @@
     </div>
     <div class="span4">
       <h3>Example abbreviations</h3>
-      <p>Abbreviations are styled with uppercase text and a light dotted bottom border. They also have a help cursor on hover so users have extra indication something will be shown on hover.</p>
-      <p><abbr title="HyperText Markup Language">HTML</abbr> is the best thing since sliced bread.</p>
+      <p>Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover. This gives users extra indication something will be shown on hover.</p>
+      <p>Add the <code>initialism</code> class to an abbreviation to increase typographic harmony by giving it a slightly smaller text size.</p>
+      <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
       <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
     </div>
   </div>
@@ -1121,7 +1123,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
         <fieldset>
           <legend>Extending form controls</legend>
           <div class="control-group">
-            <label class="control-label">Form sizes</label>
+            <label class="control-label">Form grid sizes</label>
             <div class="controls docs-input-sizes">
               <input class="span1" type="text" placeholder=".span1">
               <input class="span2" type="text" placeholder=".span2">
@@ -1148,6 +1150,15 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
                 <option>5</option>
               </select>
               <p class="help-block">Use the same <code>.span*</code> classes from the grid system for input sizes.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Alternate sizes</label>
+            <div class="controls docs-input-sizes">
+              <input class="input-mini" type="text" placeholder=".input-mini">
+              <input class="input-small" type="text" placeholder=".input-small">
+              <input class="input-medium" type="text" placeholder=".input-medium">
+              <p class="help-block">You may also use static classes that don't map to the grid, adapt to the responsive CSS styles, or account for varying types of controls (e.g., <code>input</code> vs. <code>select</code>).</p>
             </div>
           </div>
           <div class="control-group">
@@ -1257,34 +1268,39 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
     </thead>
     <tbody>
       <tr>
-        <td><a class="btn" href="#">Default</a></td>
+        <td><button class="btn" href="#">Default</button></td>
         <td><code>.btn</code></td>
         <td>Standard gray button with gradient</td>
       </tr>
       <tr>
-        <td><a class="btn btn-primary" href="#">Primary</a></td>
+        <td><button class="btn btn-primary" href="#">Primary</button></td>
         <td><code>.btn-primary</code></td>
         <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
       </tr>
       <tr>
-        <td><a class="btn btn-info" href="#">Info</a></td>
+        <td><button class="btn btn-info" href="#">Info</button></td>
         <td><code>.btn-info</code></td>
         <td>Used as an alternate to the default styles</td>
       </tr>
       <tr>
-        <td><a class="btn btn-success" href="#">Success</a></td>
+        <td><button class="btn btn-success" href="#">Success</button></td>
         <td><code>.btn-success</code></td>
         <td>Indicates a successful or positive action</td>
       </tr>
       <tr>
-        <td><a class="btn btn-warning" href="#">Warning</a></td>
+        <td><button class="btn btn-warning" href="#">Warning</button></td>
         <td><code>.btn-warning</code></td>
         <td>Indicates caution should be taken with this action</td>
       </tr>
       <tr>
-        <td><a class="btn btn-danger" href="#">Danger</a></td>
+        <td><button class="btn btn-danger" href="#">Danger</button></td>
         <td><code>.btn-danger</code></td>
         <td>Indicates a dangerous or potentially negative action</td>
+      </tr>
+  	  <tr>
+        <td><button class="btn btn-inverse" href="#">Inverse</button></td>
+        <td><code>.btn-inverse</code></td>
+        <td>Alternate dark gray button, not tied to a semantic action or use</td>
       </tr>
     </tbody>
   </table>
@@ -1299,7 +1315,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
     </div>
     <div class="span4">
       <h3>Multiple sizes</h3>
-      <p>Fancy larger or smaller buttons? Add <code>.btn-large</code> or <code>.btn-small</code> for two additional sizes.</p>
+      <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for two additional sizes.</p>
       <p>
         <button class="btn btn-large btn-primary">Primary action</button>
         <button class="btn btn-large">Action</button>
@@ -1307,6 +1323,10 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
       <p>
         <button class="btn btn-small btn-primary">Primary action</button>
         <button class="btn btn-small">Action</button>
+      </p>
+      <p>
+        <button class="btn btn-mini btn-primary">Primary action</button>
+        <button class="btn btn-mini">Action</button>
       </p>
       <br>
       <h3>Disabled state</h3>
@@ -1338,9 +1358,9 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
 &lt;button class="btn" type="submit"&gt;
   Button
 &lt;/button&gt;
-&lt;input class="btn" type="button" 
+&lt;input class="btn" type="button"
          value="Input"&gt;
-&lt;input class="btn" type="submit" 
+&lt;input class="btn" type="submit"
          value="Submit"&gt;
 </pre>
       <p>As a best practice, try to match the element for you context to ensure matching cross-browser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
@@ -1509,7 +1529,7 @@ For example, &lt;code&gt;section&lt;/code&gt; should be wrapped as inline.
     </div>
     <div class="span4">
       <h3>How to use</h3>
-      <p>With v2.0.0, we have opted to use an <code>&lt;i&gt;</code> tag for all our icons, but they have no case class&mdash;only a shared prefix. To use, place the following code just about anywhere:</p>
+      <p>With v2.0.1, we have opted to use an <code>&lt;i&gt;</code> tag for all our icons, but they have no case class&mdash;only a shared prefix. To use, place the following code just about anywhere:</p>
 <pre class="prettyprint linenums">
 &lt;i class="icon-search"&gt;&lt;/i&gt;
 </pre>

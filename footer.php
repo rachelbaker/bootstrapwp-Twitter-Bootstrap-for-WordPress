@@ -15,6 +15,9 @@
 
       <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; <?php bloginfo('name'); ?> <?php the_time('Y') ?></p>
+          <?php
+    if ( function_exists('dynamic_sidebar')) dynamic_sidebar("footer-content");
+?>
       </footer>
 
     </div> <!-- /container -->
@@ -44,6 +47,7 @@ jQuery(function () {
         jQuery('.dropdown-toggle').dropdown();
       })
   });
+});
 </script>
   </body>
 </html>

@@ -11,7 +11,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  * 
- * Last Updated: February 12, 2012
+ * Last Updated: February 19, 2012
  */
 
  /**
@@ -126,6 +126,15 @@ function bootstrapwp_widgets_init() {
     'after_title'   => '</h2>'
   ));
 
+    register_sidebar(array(
+    'name' => 'Footer Content',
+    'id'   => 'footer-content',
+    'description'   => 'Footer text or acknowledgements',
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h4>',
+    'after_title'   => '</h4>'
+  ));
 }
 add_action( 'init', 'bootstrapwp_widgets_init' );
 

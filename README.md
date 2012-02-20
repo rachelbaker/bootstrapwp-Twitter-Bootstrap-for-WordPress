@@ -5,7 +5,19 @@ Bootstrap is a responsive front-end toolkit from Twitter designed to kickstart w
 
 For the most up-to-date version, follow the in-process development branch: [https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/tree/2.0-update](https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/tree/2.0-update)
 
+Version .85 in Development
 
+__Functions.php__
+
+*	Declared widget area for footer-content
+
+__Footer.php__
+
+*	Inserted widget code for footer content widget
+
+__Index.php__
+
+*	Added WordPress loop to template so page editor can be used to easily update/add content to top section of index.php	
 **Latest version release: .8 (02/12/2012)**
 
 Version .8 Change Log
@@ -137,7 +149,7 @@ View the javascript guide at: [http://rachelbaker.me/bootstrapwp/javascript-for-
 Usage
 -----
 
-Download the Bootstrapwp theme, and install to your WordPress site.
+Download the BootstrapWP theme, and install to your WordPress site.
 
 This is meant to be a base theme for WordPress custom theme development.  
 

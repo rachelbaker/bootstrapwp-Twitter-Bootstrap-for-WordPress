@@ -289,7 +289,7 @@
 </pre>
 
 <pre class="prettyprint linenums">
-&lt;div class="modal"&gt;
+&lt;div class="modal" id="myModal"&gt;
   &lt;div class="modal-header"&gt;
     &lt;a class="close" data-dismiss="modal"&gt;&times;&lt;/a&gt;
     &lt;h3&gt;Modal header&lt;/h3&gt;
@@ -930,7 +930,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
             </p>
           </div>
           <hr>
-          <h2>Using bootstrap-alerts.js</h2>
+          <h2>Using bootstrap-alert.js</h2>
           <p>Enable dismissal of an alert via javascript:</p>
           <pre class="prettyprint linenums">$(".alert").alert()</pre>
           <h3>Markup</h3>
@@ -1320,7 +1320,7 @@ $('#myCollapsible').on('hidden', function () {
           <h4>.carousel(options)</h4>
           <p>Initializes the carousel with an optional options <code>object</code> and starts cycling through items.</p>
 <pre class="prettyprint linenums">
-$('.myCarousel').carousel({
+$('.carousel').carousel({
   interval: 2000
 })
 </pre>

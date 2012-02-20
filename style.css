@@ -4,7 +4,8 @@ Theme URI: http://www.rachelbaker.me
 Author: Rachel Baker
 Author URI: http://www.rachelbaker.me
 Description: A semantic HTML base theme for WordPress ported from Twitter Bootstrap
-Version: 1.0
+Version: .85
+=======
 License: GNU General Public License
 License URI: license.txt
 
@@ -444,3 +445,14 @@ filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-color: #0044cc;
 }
 .button:active, #submit:active, .widget_search #searchsubmit:active, .button.green:active {position: relative; top:1px;}
+
+/* Custom Elements Added
+----------------------------------------------------------------------------------------*/
+.masthead h2 {
+  margin-bottom: 0;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+  text-align: center;
+  margin-bottom: 9px;
+}

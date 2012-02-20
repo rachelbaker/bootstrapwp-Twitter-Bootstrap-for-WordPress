@@ -42,7 +42,13 @@ input,
 button,
 select,
 textarea {
-  #font > .sans-serif(@baseFontSize,normal,@baseLineHeight);
+  #font > .shorthand(@baseFontSize,normal,@baseLineHeight); // Set size, weight, line-height here
+}
+input,
+button,
+select,
+textarea {
+  #font > #family > .sans-serif(); // And only set font-family here for those that need it (note the missing label element)
 }
 
 // Identify controls by their labels
@@ -90,9 +96,12 @@ input[type="radio"] {
   margin: 3px 0;
   *margin-top: 0; /* IE7 */
   line-height: normal;
-  border: 0;
   cursor: pointer;
   .border-radius(0);
+  border: 0 \9; /* IE9 and down */
+}
+input[type="image"] {
+  border: 0;
 }
 
 // Reset the file input to browser defaults
@@ -327,6 +336,7 @@ select:focus:required:invalid {
 // ---------
 
 .help-block {
+  display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 0;
   color: @grayLight;
@@ -460,15 +470,15 @@ select:focus:required:invalid {
 }
 // Make the prepend and append add-on vertical-align: middle;
 .form-search .input-append .add-on,
-.form-inline .input-prepend .add-on,
-.form-search .input-append .add-on,
+.form-search .input-prepend .add-on,
+.form-inline .input-append .add-on,
 .form-inline .input-prepend .add-on {
   vertical-align: middle;
 }
 // Inline checkbox/radio labels
 .form-search .radio,
-.form-inline .radio,
 .form-search .checkbox,
+.form-inline .radio,
 .form-inline .checkbox {
   margin-bottom: 0;
   vertical-align: middle;
