@@ -1,0 +1,122 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rachel Baker <rachel@rachelbaker.me>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+
+#. Text in function
+#: bootstrapwp/image.php:38
+msgid "&larr; Previous"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:92
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/functions.php:202
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/archive.php:25
+msgid "Archives"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/author.php:31
+msgid "Author Archives: %s"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/image.php:98
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:94
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/comments.php:59
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/archive.php:25
+msgid "Daily Archives: %s"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:34
+#: bootstrapwp/image.php:100
+msgid "Edit"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/404.php:24
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/search.php:36
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you should try again with a different search term."
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/404.php:44
+msgid "Most Used Categories"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/functions.php:206
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:39
+msgid "Next &rarr;"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/search.php:35
+msgid "No Results Found"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:86
+msgid "Pages:"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/image.php:22
+msgid "Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+
+#. Text in function
+#: bootstrapwp/search.php:20
+msgid "Search Results for: %s"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/404.php:23
+msgid "This is Embarrassing"
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#. Text in echo
+#: bootstrapwp/image.php:96
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+

@@ -11,14 +11,19 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  * 
- * Last Updated: February 19, 2012
+ * Last Updated: February 20, 2012
  */
 
  /**
- * Set the content width based on the theme's design and stylesheet.
+ * Declaring the content width based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) )
-  $content_width = 620; /* pixels */
+  $content_width = 770; /* pixels */
+
+/**
+ * Declaring the theme language domain
+ */
+load_theme_textdomain('bootstrapwp'); 
 
 ################################################################################
 // Loading All CSS Stylesheets

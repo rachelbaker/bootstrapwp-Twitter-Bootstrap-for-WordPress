@@ -10,6 +10,23 @@ Version .85 in Development
 __Functions.php__
 
 *	Declared widget area for footer-content
+*	Changed content_width size to 770px
+*	Added theme language text domain
+
+__Style.css__
+
+*	Added .wp-caption and .wp-caption-text style for image captions
+*	Added .gallery-caption style for image gallery captions
+*	Added .bypostauthor style for comments
+*	Added .sticky style for sticky posts
+
+__Archive.php__
+
+*	Added `<div <?php post_class(); ?>>` to enable sticky posts
+
+__Author.php__
+
+*	Added `<div <?php post_class(); ?>>` to enable sticky posts
 
 __Footer.php__
 
@@ -17,7 +34,23 @@ __Footer.php__
 
 __Index.php__
 
-*	Added WordPress loop to template so page editor can be used to easily update/add content to top section of index.php	
+*	Added WordPress loop to template so page editor can be used to easily update/add content to top section of index.php
+
+__Page-Blog.php__
+
+*	Added `<div <?php post_class(); ?>>` to enable sticky posts
+
+__Page-JSGuide.php__
+
+*	Changed carousel images function to get_template_directory_uri()
+
+__Misc.__
+
+*	Added /lang folder with language files
+
+
+
+
 **Latest version release: .8 (02/12/2012)**
 
 Version .8 Change Log
