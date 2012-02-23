@@ -156,7 +156,7 @@ function bootstrapwp_theme_setup() {
 	 */
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
 }
-
+add_action( 'after_setup_theme', 'bootstrapwp_theme_setup' );
 
 ################################################################################
 // Setting Image Sizes

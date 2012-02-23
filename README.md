@@ -12,6 +12,7 @@ __Functions.php__
 *	Declared widget area for footer-content
 *	Changed content_width size to 770px
 *	Added theme language text domain
+*	Added after_theme_setup hook to enable post formats 
 
 __Style.css__
 
