@@ -931,7 +931,6 @@ input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, selec
   padding: 4px 5px;
   font-weight: normal;
   line-height: 18px;
-  color: #999999;
   text-align: center;
   text-shadow: 0 1px 0 #ffffff;
   background-color: #f5f5f5;
@@ -2741,6 +2740,9 @@ button.btn.btn-small, input[type="submit"].btn.btn-small {
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.navbar-fixed-top .container, .navbar-fixed-bottom .container {
+  width: 940px;
+}
 .navbar-fixed-top {
   top: 0;
 }
@@ -2860,6 +2862,7 @@ button.btn.btn-small, input[type="submit"].btn.btn-small {
 .breadcrumb {
   padding: 7px 14px;
   margin: 0 0 18px;
+  list-style: none;
   background-color: #fbfbfb;
   background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
   background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
@@ -3058,12 +3061,13 @@ button.btn.btn-small, input[type="submit"].btn.btn-small {
   max-height: 400px;
   padding: 15px;
 }
-.modal-body .modal-form {
+.modal-form {
   margin-bottom: 0;
 }
 .modal-footer {
   padding: 14px 15px 15px;
   margin-bottom: 0;
+  text-align: right;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   -webkit-border-radius: 0 0 6px 6px;
@@ -3081,8 +3085,7 @@ button.btn.btn-small, input[type="submit"].btn.btn-small {
 .modal-footer:after {
   clear: both;
 }
-.modal-footer .btn {
-  float: right;
+.modal-footer .btn + .btn {
   margin-left: 5px;
   margin-bottom: 0;
 }
@@ -3299,8 +3302,9 @@ a.thumbnail:hover {
   padding: 1px 4px 2px;
   font-size: 10.998px;
   font-weight: bold;
-  white-space: nowrap;
+  line-height: 13px;
   color: #ffffff;
+  white-space: nowrap;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #999999;
   -webkit-border-radius: 3px;

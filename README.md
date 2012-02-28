@@ -7,10 +7,16 @@ For the most up-to-date version, follow the in-process development branch: [http
 
 Version .85 in Development
 
+__Bootstrap Styles and Scripts__
+
+*	Updated JS files from Bootstrap 2.0.2 branch as of February 28, 2012
+*	Updated CSS files from Bootstrap 2.0.2 branch as of February 28, 2012
+*	Updated LESS files from Bootstrap 2.0.2 branch as of February 28, 2012
+
 __Functions.php__
 
 *	Declared widget area for footer-content
-*	Changed content_width size to 770px
+*	Fixed content_width size, now 770px
 *	Added theme language text domain
 *	Added after_theme_setup hook to enable post formats 
 
@@ -24,6 +30,7 @@ __Style.css__
 __Archive.php__
 
 *	Added `<div <?php post_class(); ?>>` to enable sticky posts
+*  Fixed Archive titles and filtering
 
 __Author.php__
 
