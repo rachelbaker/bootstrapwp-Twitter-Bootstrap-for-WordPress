@@ -5,13 +5,14 @@ Bootstrap is a responsive front-end toolkit from Twitter designed to kickstart w
 
 For the most up-to-date version, follow the in-process development branch: [https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/tree/2.0-update](https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/tree/2.0-update)
 
-Version .85 in Development
+Version .85 (Released 03/01/2012)
+-------------
 
 __Bootstrap Styles and Scripts__
 
-*	Updated JS files from Bootstrap 2.0.2 branch as of February 28, 2012
-*	Updated CSS files from Bootstrap 2.0.2 branch as of February 28, 2012
-*	Updated LESS files from Bootstrap 2.0.2 branch as of February 28, 2012
+*	Updated JS files from Bootstrap 2.0.2 branch as of March 1, 2012
+*	Updated CSS files from Bootstrap 2.0.2 branch as of March 1, 2012
+*	Updated LESS files from Bootstrap 2.0.2 branch as of March 1, 2012
 
 __Functions.php__
 
@@ -55,124 +56,7 @@ __Page-JSGuide.php__
 __Misc.__
 
 *	Added /lang folder with language files
-
-
-
-
-**Latest version release: .8 (02/12/2012)**
-
-Version .8 Change Log
----
-
-__Header.php__
-
-*	Changed title to <title><?php wp_title(''); ?></title> to allow for better integration with WordPress SEO plugin
-
-* Added body data attributes: data-spy="scroll" data-target=".subnav" data-offset="50" data-rendering="true"
-
-* Changed navbar class to Bootstrap default of "navbar-fixed-top"
-
-* Updated wp_nav_menu function array, added "'container' => 'div', 'container_class' => 'nav-collapse'," to provide div wrapper with proper class
-
-
-__Functions.php__
-
-*	Improved file structure and comments
-
-*	Added bootstrap-responsive.css to bootstrapwp_css_loader function
-
-*	Added application.js to bootstrapwp_js_loader function and removed tablesorter.js
-
-*	Revised pagination section to use ul class="pager" instead of div id="pagination"
-
-*	Revised sidebars to use div element as widget wrapper instead of aside element
-
-*	Changed widget titles to h4 instead of h3 elements
-
-*	Added catch_that_image function to grab the first image in blog posts
-
-*	Added support for post-thumbnails and added image sizes for Boostrap image thumbnails
-
-
-__Page-JSGuide.php__
-
-*	Updated Javascript Guide Template to match content from Bootstrap javascript.html file
-
-
-__Footer.php__
-
-*	Removed jQuery onload functions that are now all called in application.js
-
-*	Added jQuery append function to automatically apply b class="caret" to dropdown menu items in navbar
-
-
-__Style.css__
-
-* Updated icon image location to match theme setup
-
-* Added .icon-white class with corrected image location
-
-* Removed over-ride of body padding to allow correct spacing with fixed navbar
-* Added styles for comment form
-
-* Added color primary button colors for comment and search submit buttons
-
-* Added styling for sidebars and sidebar list items
-
-* Added .meta class for blog post meta information
-
-
-
-__Single.php___
-
-*	Edited content on index.php template to directly correlate with index.html Bootstrap file
-
-*	Added bootstrapwp_posted_on function under post title
-
-
-__Page-simple.php__
-
-*	Created template for a simple page with right sidebar, no breadcrumbs or subhead masthead.
-
-
-__Page-blog.php__
-
-*	Created template for a main blog page with right sidebar.
-
-*	Added paging to blog template
-
-*	Displayed first image attached to blog posts using catch_that_image function
-
-
-__Author.php__
-
-*	Fixed formatting on this template file to match archive.php
-
-*	Added hr element to seperate posts 
-
-*	Displayed first image attached to blog posts using catch_that_image function
-
-
-__Archive.php__
-
-*	Added hr element to seperate archive post listings
-
-*	Displayed first image attached to blog posts using catch_that_image function
-
-
-__Other/Misc.__
-
-*	Updated CSS and JS files to Bootstrap 2 Final Release files 
-
-*	Removed "lib" folder and replaced with Bootstrap "less" folder
-
-*	Removed tablesorter.js file - as it is no longer used in Bootstrap 2.0
-
-*	Removed wordpress.css file - as it is no longer used in Bootstrap 2.0
-
-*	Updated screenshot.png file
-
-*	Removed image.php template file
+*  Removed image.php template file
 
 
 
@@ -201,23 +85,11 @@ You can override any of the styles using style.css file.  All .css and .js files
 
 Bug tracker
 -----------
-**Report additional bugs** [https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/issues](https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/issues)
-
-
 **Known theme bugs:**
 
-* REQUIRED: This theme doesn't seem to display tags. Modify it to display tags in appropriate locations.
-* REQUIRED: .wp-caption css class is needed in your theme css.
-* REQUIRED: .wp-caption-text css class is needed in your theme css.
-* REQUIRED: .bypostauthor css class is needed in your theme css.
-* RECOMMENDED: Text domain problems in functions.php. You have not included a text domain!
-Line 408: echo __('Page') . ' ' . get_query_var('paged');
-* RECOMMENDED: No reference to add_editor_style() was found in the theme. It is recommended that the theme implement editor styling, so as to make the editor content match the resulting post output in the theme, for a better user experience.
-* RECOMMENDED: No reference to add_custom_image_header was found in the theme. It is recommended that the theme implement this functionality if using an image for the header.
-* RECOMMENDED: No reference to add_custom_background() was found in the theme. If the theme uses background images or solid colors for the background, then it is recommended that the theme implement this functionality.
-* RECOMMENDED: Tags: is either empty or missing in style.css header.
+Listed on the [Bug Tracker](http://rachelbaker.me/bootstrapwp/bug-tracker/) page
 
-**Have a bug? Please create an issue here on GitHub!**
+**Report additional bugs** [https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/issues](https://github.com/rachelbaker/bootstrapwp-Twitter-Bootstrap-for-WordPress/issues)
 
 
 

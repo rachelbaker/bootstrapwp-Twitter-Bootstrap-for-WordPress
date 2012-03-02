@@ -487,6 +487,8 @@ function catch_that_image() {
 
   }
 } // end bootstrapwp_breadcrumbs()
+
+
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a bootstrap.
  */
