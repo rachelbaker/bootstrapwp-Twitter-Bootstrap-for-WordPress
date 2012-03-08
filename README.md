@@ -73,7 +73,7 @@ You can view a demo of this theme running on WordPress at:  [http://rachelbaker.
 
 View the theme style guide at: [http://rachelbaker.me/bootstrapwp/style-guide/](http://rachelbaker.me/bootstrapwp/style-guide/)
 
-View the javascript guide at: [http://rachelbaker.me/bootstrapwp/javascript-for-bootstrap/](http://rachelbaker.me/bootstrapwp/javascript-for-bootstrap/)
+View the javascript guide at: [http://rachelbaker.me/bootstrapwp/javascript-guide/](http://rachelbaker.me/bootstrapwp/javascript-guide/)
 
 
 
