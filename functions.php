@@ -162,11 +162,11 @@ add_action( 'after_setup_theme', 'bootstrapwp_theme_setup' );
 // Setting Image Sizes
 ################################################################################
 if ( function_exists( 'add_theme_support' ) ) {
-  add_theme_support( 'post-thumbnails' );
-  set_post_thumbnail_size( 160, 120 ); // 160 pixels wide by 120 pixels high   
+  add_theme_support( 'post-thumbnails' );  
 }
 
 if ( function_exists( 'add_image_size' ) ) { 
+  add_image_size( 'bootstrap-thumb', 160, 120 ); // 160 pixels wide by 120 pixels high
   add_image_size( 'bootstrap-small', 260, 180 ); // 260 pixels wide by 180 pixels high
   add_image_size( 'bootstrap-medium', 360, 268 ); // 360 pixels wide by 268 pixels high
 }
@@ -364,23 +364,36 @@ add_filter( 'attachment_link', 'bootstrapwp_enhanced_image_navigation' );
 ################################################################################
 
 function catch_that_image() {
-  global $post, $posts;
-  $first_img = '';
-  $new_img_tag = "";
 
-  ob_start();
-  ob_end_clean();
-  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
-  $first_img = $matches [1] [0];
+global $post, $posts;
+$first_img = '';
+$new_img_tag = "";
+$width = '160px';
+$height = '120px';
+$class = 'thumbnail';
 
-  if(empty($first_img)){ //Defines a default image with 0 width
-  $new_img_tag = "<img src='/images/noimage.jpg' width='0px' class='alignright' />";
+  /**
+  *
+  *  First see if a Featured Image has been set if not find first image in post, if no image load default image
+  *
+  */
+
+if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+  the_post_thumbnail('bootstrap-thumb', array('class' => $class));
+} else {
+
+ob_start();
+ob_end_clean();
+
+      $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+
+      if ( $output == true ){
+        $first_img = $matches [1] [0];
+        $new_img_tag = "<img src='" .  $first_img . "' width='" . $width . "' height='" . $height . "' class='" . $class . "' />"; // First image
+      } else {
+        $new_img_tag = "<img src='" . get_template_directory_uri() . "/img/no-image-small.png' width='" . $width . "' height='" . $height . "' class='" . $class . "' />"; // Default Image
+      }
   }
-
-  else{
-  $new_img_tag = "<img src='" .  $first_img . "' width='160px' height='120px' class='thumbnail' />";
-  }
-
   return $new_img_tag;
   }
 
