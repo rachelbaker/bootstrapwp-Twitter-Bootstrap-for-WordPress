@@ -23,7 +23,7 @@ get_header(); ?>
 			 <div class="row content">
 <div class="span8">
 					<?php while ( have_posts() ) : the_post(); ?>
-<h2><?php the_title();?></h2>
+<a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h2> <?php the_title();?></h2></a>
 <p><?php the_excerpt();?></p>
 <hr />
 
