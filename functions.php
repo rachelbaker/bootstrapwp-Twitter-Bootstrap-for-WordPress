@@ -23,7 +23,7 @@ if ( ! isset( $content_width ) )
 /**
  * Declaring the theme language domain
  */
-load_theme_textdomain('bootstrapwp');
+load_theme_textdomain('bootstrapwp', get_template_directory() . '/lang');
 
 ################################################################################
 // Loading All CSS Stylesheets
