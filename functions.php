@@ -184,7 +184,7 @@ if ( function_exists( 'add_image_size' ) ) {
 | */
 function bootstrapwp_excerpt($more) {
        global $post;
-  return '&nbsp; &nbsp;<a href="'. get_permalink($post->ID) . '">...Continue Reading</a>';
+  return '&nbsp; &nbsp;<a href="'. get_permalink($post->ID) . '">'.__( '...Continue Reading', 'bootstrapwp' ).'</a>';
 }
 add_filter('excerpt_more', 'bootstrapwp_excerpt');
 
@@ -420,7 +420,7 @@ add_action('future_to_publish', 'bootstrapwp_autoset_featured_img');
       $thisCat = get_category($thisCat);
       $parentCat = get_category($thisCat->parent);
       if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-      echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+      echo $before . _e( 'Archive by category ', 'bootstrapwp' ) . ' "' . single_cat_title('', false) . '"' . $after;
 
     } elseif ( is_day() ) {
       echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
@@ -481,7 +481,7 @@ add_action('future_to_publish', 'bootstrapwp_autoset_featured_img');
     } elseif ( is_author() ) {
        global $author;
       $userdata = get_userdata($author);
-      echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+      echo $before . _e( 'Articles posted by ', 'bootstrapwp' ) . $userdata->display_name . $after;
 
     } elseif ( is_404() ) {
       echo $before . 'Error 404' . $after;
