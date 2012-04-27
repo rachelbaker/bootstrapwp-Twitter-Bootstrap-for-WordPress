@@ -10,6 +10,7 @@
  *
  * Last Revised: January 22, 2012
  */
+$options = get_option( 'bootstrapwp_theme_options' );
 get_header(); ?>
  <div class="container">
 <?php if ( have_posts() ) : ?>
@@ -21,6 +22,7 @@ get_header(); ?>
        
       </header>
 			 <div class="row content">
+			 	<?php if($options['sidebar_pos'] == 'left') get_sidebar();  ?>
 <div class="span8">
 					<?php while ( have_posts() ) : the_post(); ?>
 <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><h2> <?php the_title();?></h2></a>
@@ -36,6 +38,7 @@ get_header(); ?>
       <p class="lead"><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you should try again with a different search term.', 'bootstrapwp' ); ?></p>
       </header>
 			 <div class="row content">
+			 	<?php if($options['sidebar_pos'] == 'left') get_sidebar();  ?>
 <div class="span8">
 					
 
@@ -50,5 +53,6 @@ get_header(); ?>
 
 		</div><!--/.span8 -->
 
-<?php get_sidebar(); ?>
+<?php if($options['sidebar_pos'] != 'left') get_sidebar();  ?>
+</div><!-- /.row .content -->
 <?php get_footer(); ?>

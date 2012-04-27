@@ -11,7 +11,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.6
  */
-
+$options = get_option( 'bootstrapwp_theme_options' );
 get_header();
 if (have_posts() ) ;?>
 <div class="row">
@@ -44,10 +44,10 @@ if (have_posts() ) ;?>
 			_e( 'Blog Archives', 'bootstrapwp' );
 		}
 		?></h1>
-	</h1>
 </header>
 
 <div class="row content">
+	<?php if($options['sidebar_pos'] == 'left') get_sidebar('blog');  ?>
 	<div class="span8">
 		<?php while ( have_posts() ) : the_post(); ?>
 		<div <?php post_class(); ?>>
@@ -69,6 +69,7 @@ if (have_posts() ) ;?>
 			<?php bootstrapwp_content_nav('nav-below');?>
 
 		</div><!-- /.span8 -->
-		<?php get_sidebar('blog'); ?>
+		<?php if($options['sidebar_pos'] != 'left') get_sidebar('blog');  ?>
+</div><!-- /.row .content -->
 
 		<?php get_footer(); ?>

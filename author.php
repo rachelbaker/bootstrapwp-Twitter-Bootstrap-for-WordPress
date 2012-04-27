@@ -6,7 +6,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  */
-
+$options = get_option( 'bootstrapwp_theme_options' );
 get_header(); ?>
 
 <?php if ( have_posts() ) : ?>
@@ -37,6 +37,7 @@ get_header(); ?>
 					rewind_posts();
 					?>
 					<div class="row content">
+						<?php if($options['sidebar_pos'] == 'left') get_sidebar('blog');  ?>
 						<div class="span8">
 							<?php /* Start the Loop */ ?>
 							<?php while ( have_posts() ) : the_post(); ?>
@@ -58,6 +59,7 @@ get_header(); ?>
 								<?php endwhile; ?>
 							<?php endif; ?>
 						</div><!-- /.span8 -->
-						<?php get_sidebar('blog'); ?>
+						<?php if($options['sidebar_pos'] != 'left') get_sidebar('blog');  ?>
+				      </div><!-- /.row .content -->
 
 						<?php get_footer(); ?>

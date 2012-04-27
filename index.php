@@ -10,6 +10,7 @@
  *
  * Last Revised: March 4, 2012
  */
+$options = get_option( 'bootstrapwp_theme_options' );
 get_header(); ?>
 <div class="container">
   <?php if (have_posts()) : while (have_posts()) : the_post(); ?> 

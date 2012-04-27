@@ -7,7 +7,7 @@
  * @subpackage WP-Bootstrap
  * @since WP-Bootstrap 0.1
  */
-
+$options = get_option( 'bootstrapwp_theme_options' );
 get_header(); ?>
 <?php while ( have_posts() ) : the_post(); ?>
   <div class="row">

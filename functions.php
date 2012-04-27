@@ -13,6 +13,11 @@
  *
  * Last Updated: April 11, 2012
  */
+ 
+ /**
+ * Declaring the theme options
+ */
+require_once ( get_stylesheet_directory() . '/theme-options.php' );
 
  /**
  * Declaring the content width based on the theme's design and stylesheet.
