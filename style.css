@@ -383,7 +383,7 @@ ol.comment-list li p.meta strong {
 #respond input.text, #respond select, #respond textarea,
 .comment-form-author input,
 .comment-form-email input,
-.comment-form-url input, {
+.comment-form-url input {
   border: 1px solid #eee;
   background: #f6f6f6;
   color: #777;
