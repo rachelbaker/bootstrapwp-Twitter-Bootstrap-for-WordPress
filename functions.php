@@ -512,6 +512,13 @@ function bootstrapwp_autoset_featured_img() {
   }
 } // end bootstrapwp_breadcrumbs()
 
+/*
+| -------------------------------------------------------------------
+| Disable WP Admin Bar in Front-End
+| -------------------------------------------------------------------
+|
+| */
+ add_filter('show_admin_bar', '__return_false');
 
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a bootstrap.
