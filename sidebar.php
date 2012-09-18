@@ -15,4 +15,4 @@
 	</div><!--/.well .sidebar-nav -->
           </div><!-- /.span4 -->
           </div><!-- /.row .content -->
-
+          </div><!-- /.row -->
