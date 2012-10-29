@@ -1,0 +1,210 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://osclass.org/\n"
+"POT-Creation-Date: 2012-10-29 14:56:42+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-10-29 11:56+-0300\n"
+"Last-Translator: Translations <translations@osclass.org>\n"
+"Language-Team: Translations <translations@osclass.org>\n"
+
+#: bootstrapwp/404.php:23
+msgid "This is Embarrassing"
+msgstr ""
+
+#: bootstrapwp/404.php:24
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching, or one of the links below, can help."
+msgstr ""
+
+#: bootstrapwp/404.php:44
+msgid "Most Used Categories"
+msgstr ""
+
+#: bootstrapwp/archive.php:26
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: bootstrapwp/archive.php:28
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: bootstrapwp/archive.php:30
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: bootstrapwp/archive.php:32
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: bootstrapwp/archive.php:38
+msgid "Category Archives: %s"
+msgstr ""
+
+#: bootstrapwp/archive.php:44
+msgid "Blog Archives"
+msgstr ""
+
+#: bootstrapwp/author.php:30
+msgid "Author Archives: %s"
+msgstr ""
+
+#: bootstrapwp/comments.php:19
+msgid ""
+"This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#: bootstrapwp/comments.php:35
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: bootstrapwp/comments.php:59
+msgid "Comments are closed."
+msgstr ""
+
+#: bootstrapwp/footer.php:15
+msgid "Back to top"
+msgstr ""
+
+#: bootstrapwp/functions.php:45
+msgid "Main Menu"
+msgstr ""
+
+#: bootstrapwp/functions.php:99
+msgid "Page Sidebar"
+msgstr ""
+
+#: bootstrapwp/functions.php:108
+msgid "Posts Sidebar"
+msgstr ""
+
+#: bootstrapwp/functions.php:117
+msgid "Home Left"
+msgstr ""
+
+#: bootstrapwp/functions.php:119
+msgid "Left textbox on homepage"
+msgstr ""
+
+#: bootstrapwp/functions.php:127
+msgid "Home Middle"
+msgstr ""
+
+#: bootstrapwp/functions.php:129
+msgid "Middle textbox on homepage"
+msgstr ""
+
+#: bootstrapwp/functions.php:137
+msgid "Home Right"
+msgstr ""
+
+#: bootstrapwp/functions.php:139
+msgid "Right textbox on homepage"
+msgstr ""
+
+#: bootstrapwp/functions.php:147
+msgid "Footer Content"
+msgstr ""
+
+#: bootstrapwp/functions.php:149
+msgid "Footer text or acknowledgements"
+msgstr ""
+
+#: bootstrapwp/functions.php:181
+msgid "...Continue Reading"
+msgstr ""
+
+#: bootstrapwp/functions.php:204
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: bootstrapwp/functions.php:208
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: bootstrapwp/functions.php:236
+msgid "Pingback:"
+msgstr ""
+
+#: bootstrapwp/functions.php:236 functions.php:259
+msgid "(Edit)"
+msgstr ""
+
+#: bootstrapwp/functions.php:246
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: bootstrapwp/functions.php:249
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#. translators: 1: date, 2: time
+#: bootstrapwp/functions.php:257
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: bootstrapwp/functions.php:285
+msgid ""
+"<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
+"\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
+"time></a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class="
+"\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel="
+"\"author\">%7$s</a></span></span>"
+msgstr ""
+
+#: bootstrapwp/functions.php:291
+msgid "View all posts by %s"
+msgstr ""
+
+#: bootstrapwp/functions.php:418
+msgid "Home"
+msgstr ""
+
+#: bootstrapwp/functions.php:437
+msgid "Archive by category "
+msgstr ""
+
+#: bootstrapwp/functions.php:490
+msgid "Search results for"
+msgstr ""
+
+#: bootstrapwp/functions.php:493
+msgid "Posts tagged"
+msgstr ""
+
+#: bootstrapwp/functions.php:498
+msgid "Articles posted by "
+msgstr ""
+
+#: bootstrapwp/functions.php:506
+msgid "Page"
+msgstr ""
+
+#: bootstrapwp/header.php:33
+msgid "Page %s"
+msgstr ""
+
+#: bootstrapwp/search.php:20
+msgid "Search Results for: %s"
+msgstr ""
+
+#: bootstrapwp/search.php:35
+msgid "No Results Found"
+msgstr ""
+
+#: bootstrapwp/search.php:36
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you "
+"should try again with a different search term."
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Default Index template to display loop of blog posts"
+msgstr ""

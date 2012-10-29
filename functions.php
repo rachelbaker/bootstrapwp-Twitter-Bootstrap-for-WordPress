@@ -1,8 +1,8 @@
-<?php
+
+ <?php
 /**
  * Bootstrap functions and definitions
- *
- * Sets up the theme and provides some helper functions. Some helper functions
+ ** Sets up the theme and provides some helper functions. Some helper functions
  * are used in the theme as custom template tags. Others are attached to action and
  * filter hooks in WordPress to change core functionality.
  *
@@ -96,7 +96,7 @@ include 'includes/class-bootstrapwp_walker_nav_menu.php';
 | */
 function bootstrapwp_widgets_init() {
   register_sidebar( array(
-    'name' => 'Page Sidebar',
+    'name' => __('Page Sidebar', 'bootstrapwp'),
     'id' => 'sidebar-page',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => "</div>",
@@ -105,7 +105,7 @@ function bootstrapwp_widgets_init() {
   ) );
 
   register_sidebar( array(
-    'name' => 'Posts Sidebar',
+    'name' => __('Posts Sidebar', 'bootstrapwp'),
     'id' => 'sidebar-posts',
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget' => "</div>",
@@ -114,9 +114,9 @@ function bootstrapwp_widgets_init() {
   ) );
 
   register_sidebar(array(
-    'name' => 'Home Left',
+    'name' => __('Home Left', 'bootstrapwp'),
     'id'   => 'home-left',
-    'description'   => 'Left textbox on homepage',
+    'description'   => __('Left textbox on homepage', 'bootstrapwp'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2>',
@@ -124,9 +124,9 @@ function bootstrapwp_widgets_init() {
   ));
 
     register_sidebar(array(
-    'name' => 'Home Middle',
+    'name' => __('Home Middle', 'bootstrapwp'),
     'id'   => 'home-middle',
-    'description'   => 'Middle textbox on homepage',
+    'description'   => __('Middle textbox on homepage', 'bootstrapwp'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2>',
@@ -134,9 +134,9 @@ function bootstrapwp_widgets_init() {
   ));
 
     register_sidebar(array(
-    'name' => 'Home Right',
+    'name' => __('Home Right', 'bootstrapwp'),
     'id'   => 'home-right',
-    'description'   => 'Right textbox on homepage',
+    'description'   => __('Right textbox on homepage', 'bootstrapwp'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h2>',
@@ -144,9 +144,9 @@ function bootstrapwp_widgets_init() {
   ));
 
     register_sidebar(array(
-    'name' => 'Footer Content',
+    'name' => __('Footer Content', 'bootstrapwp'),
     'id'   => 'footer-content',
-    'description'   => 'Footer text or acknowledgements',
+    'description'   => __('Footer text or acknowledgements', 'bootstrapwp'),
     'before_widget' => '<div id="%1$s" class="widget %2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h4>',
@@ -178,7 +178,7 @@ if ( function_exists( 'add_image_size' ) ) {
 | */
 function bootstrapwp_excerpt($more) {
        global $post;
-  return '&nbsp; &nbsp;<a href="'. get_permalink($post->ID) . '">...Continue Reading</a>';
+  return '&nbsp; &nbsp;<a href="'. get_permalink($post->ID) . '">'.__( '...Continue Reading', 'bootstrapwp' ).'</a>';
 }
 add_filter('excerpt_more', 'bootstrapwp_excerpt');
 
@@ -415,7 +415,7 @@ function bootstrapwp_autoset_featured_img() {
  function bootstrapwp_breadcrumbs() {
 
   $delimiter = '<span class="divider">/</span>';
-  $home = 'Home'; // text for the 'Home' link
+  $home = __('Home', 'bootstrapwp'); // text for the 'Home' link
   $before = '<li class="active">'; // tag before the current crumb
   $after = '</li>'; // tag after the current crumb
 
@@ -434,7 +434,7 @@ function bootstrapwp_autoset_featured_img() {
       $thisCat = get_category($thisCat);
       $parentCat = get_category($thisCat->parent);
       if ($thisCat->parent != 0) echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-      echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+      echo $before . _e( 'Archive by category ', 'bootstrapwp' ) . ' "' . single_cat_title('', false) . '"' . $after;
 
     } elseif ( is_day() ) {
       echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
@@ -487,15 +487,15 @@ function bootstrapwp_autoset_featured_img() {
       echo $before . get_the_title() . $after;
 
     } elseif ( is_search() ) {
-      echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+      echo $before . _e('Search results for', 'bootstrapwp') .'"' . get_search_query() . '"' . $after;
 
     } elseif ( is_tag() ) {
-      echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+      echo $before . _e('Posts tagged', 'bootstrapwp') .'"' . single_tag_title('', false) . '"' . $after;
 
     } elseif ( is_author() ) {
        global $author;
       $userdata = get_userdata($author);
-      echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+      echo $before . _e('Articles posted by ', 'bootstrapwp') . $userdata->display_name . $after;
 
     } elseif ( is_404() ) {
       echo $before . 'Error 404' . $after;
@@ -516,3 +516,4 @@ function bootstrapwp_autoset_featured_img() {
 /**
  * This theme was built with PHP, Semantic HTML, CSS, love, and a bootstrap.
  */
+
