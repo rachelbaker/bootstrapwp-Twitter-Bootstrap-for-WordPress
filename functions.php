@@ -23,11 +23,6 @@ define('BOOTSTRAPWP_VERSION', '.90');
 if ( ! isset( $content_width ) )
   $content_width = 770; /* pixels */
 
-/**
- * Declaring the theme language domain
- */
-load_theme_textdomain('bootstrapwp');
-
 /*
 | -------------------------------------------------------------------
 | Setup Theme
@@ -45,6 +40,10 @@ function bootstrapwp_theme_setup() {
     'main-menu' => __( 'Main Menu', 'bootstrapwp' ),
   ) );
   add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery', 'link', 'quote', 'status', 'video', 'audio', 'chat' ) );
+  /**
+   * Declaring the theme language domain
+   */
+   load_theme_textdomain('bootstrapwp', get_template_directory() . '/lang');
 }
 endif;
 
