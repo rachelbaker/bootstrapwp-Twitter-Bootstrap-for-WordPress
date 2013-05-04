@@ -5,125 +5,191 @@ msgstr ""
 "Project-Id-Version: BootstrapWP .87\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/bootstrapwp-Twitter-Bootstrap-"
 "for-WordPress\n"
-"POT-Creation-Date: 2012-11-08 11:17:01+00:00\n"
+"POT-Creation-Date: 2013-05-04 01:21-0300\n"
+"PO-Revision-Date: 2013-05-04 01:21-0300\n"
+"Last-Translator: Rafael Funchal <rafaelfunchal@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
 
-#: 404.php:23
+#: ../404.php:23
 msgid "This is Embarrassing"
 msgstr ""
 
-#: 404.php:24
+#: ../404.php:24
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching, or one of the links below, can help."
 msgstr ""
 
-#: 404.php:44
+#: ../404.php:44
 msgid "Most Used Categories"
 msgstr ""
 
-#: archive.php:26
+#: ../archive.php:26
+#, php-format
 msgid "Daily Archives: %s"
 msgstr ""
 
-#: archive.php:28
+#: ../archive.php:28
+#, php-format
 msgid "Monthly Archives: %s"
 msgstr ""
 
-#: archive.php:28
-msgctxt "monthly archives date format"
+#: ../archive.php:28
 msgid "F Y"
-msgstr ""
+msgid_plural "monthly archives date format"
+msgstr[0] ""
+msgstr[1] ""
 
-#: archive.php:30
+#: ../archive.php:30
+#, php-format
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: archive.php:30
-msgctxt "yearly archives date format"
+#: ../archive.php:30
 msgid "Y"
-msgstr ""
+msgid_plural "yearly archives date format"
+msgstr[0] ""
+msgstr[1] ""
 
-#: archive.php:32
+#: ../archive.php:32
+#, php-format
 msgid "Tag Archives: %s"
 msgstr ""
 
-#: archive.php:38
+#: ../archive.php:38
+#, php-format
 msgid "Category Archives: %s"
 msgstr ""
 
-#: archive.php:44
+#: ../archive.php:44
 msgid "Blog Archives"
 msgstr ""
 
-#: author.php:30
+#: ../author.php:30
+#, php-format
 msgid "Author Archives: %s"
 msgstr ""
 
-#: comments.php:19
+#: ../comments.php:19
 msgid ""
 "This post is password protected. Enter the password to view any comments."
 msgstr ""
 
-#: comments.php:35
+#: ../comments.php:35
+#, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:59
+#: ../comments.php:59
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:45
+#: ../footer.php:15
+msgid "Back to top"
+msgstr ""
+
+#: ../functions.php:40
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:198
-msgctxt "Previous post link"
+#: ../functions.php:98
+msgid "Page Sidebar"
+msgstr ""
+
+#: ../functions.php:107
+msgid "Posts Sidebar"
+msgstr ""
+
+#: ../functions.php:116
+msgid "Home Left"
+msgstr ""
+
+#: ../functions.php:118
+msgid "Left textbox on homepage"
+msgstr ""
+
+#: ../functions.php:126
+msgid "Home Middle"
+msgstr ""
+
+#: ../functions.php:128
+msgid "Middle textbox on homepage"
+msgstr ""
+
+#: ../functions.php:136
+msgid "Home Right"
+msgstr ""
+
+#: ../functions.php:138
+msgid "Right textbox on homepage"
+msgstr ""
+
+#: ../functions.php:146
+msgid "Footer Content"
+msgstr ""
+
+#: ../functions.php:148
+msgid "Footer text or acknowledgements"
+msgstr ""
+
+#: ../functions.php:180
+msgid "...Continue Reading"
+msgstr ""
+
+#: ../functions.php:197
 msgid "&larr;"
-msgstr ""
+msgid_plural "Previous post link"
+msgstr[0] ""
+msgstr[1] ""
 
-#: functions.php:199
-msgctxt "Next post link"
+#: ../functions.php:198
 msgid "&rarr;"
-msgstr ""
+msgid_plural "Next post link"
+msgstr[0] ""
+msgstr[1] ""
 
-#: functions.php:204
+#: ../functions.php:203
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: functions.php:208
+#: ../functions.php:207
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: functions.php:236
+#: ../functions.php:235
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:236 functions.php:259
+#: ../functions.php:235 ../functions.php:258
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:246
+#: ../functions.php:245
+#, php-format
 msgid "%s <span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:249
+#: ../functions.php:248
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#. translators: 1: date, 2: time
-#: functions.php:257
+#: ../functions.php:256
+#, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: functions.php:285
+#: ../functions.php:284
+#, php-format
 msgid ""
 "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel="
 "\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</"
@@ -132,50 +198,51 @@ msgid ""
 "\"author\">%7$s</a></span></span>"
 msgstr ""
 
-#: functions.php:291
+#: ../functions.php:290
+#, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: functions.php:506
+#: ../functions.php:436
+msgid "Archive by category"
+msgstr ""
+
+#: ../functions.php:489
+msgid "Search results for"
+msgstr ""
+
+#: ../functions.php:492
+msgid "Posts tagged"
+msgstr ""
+
+#: ../functions.php:497
+msgid "Articles posted by"
+msgstr ""
+
+#: ../functions.php:500
+msgid "Error 404"
+msgstr ""
+
+#: ../functions.php:505
 msgid "Page"
 msgstr ""
 
-#: header.php:33
+#: ../header.php:33
+#, php-format
 msgid "Page %s"
 msgstr ""
 
-#: search.php:20
+#: ../search.php:20
+#, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:35
+#: ../search.php:35
 msgid "No Results Found"
 msgstr ""
 
-#: search.php:36
+#: ../search.php:36
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you "
 "should try again with a different search term."
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "BootstrapWP"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "http://bootstrapwp.rachelbaker.me"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"A semantic HTML/CSS framework base theme for WordPress Developers ported "
-"from Twitter Bootstrap"
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Rachel Baker"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "http://www.rachelbaker.me"
 msgstr ""
