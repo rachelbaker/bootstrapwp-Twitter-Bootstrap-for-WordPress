@@ -382,27 +382,39 @@ function bootstrapwp_post_thumbnail_check() {
 | */
 function bootstrapwp_autoset_featured_img() {
 
-  $post_thumbnail = bootstrapwp_post_thumbnail_check();
-  if ($post_thumbnail == true ){
-    return the_post_thumbnail();
-  }
-    if ($post_thumbnail == false ){
-      $image_args = array(
-                'post_type' => 'attachment',
-                'numberposts' => 1,
-                'post_mime_type' => 'image',
-                'post_parent' => $post->ID,
-                'order' => 'desc'
-          );
-      $attached_image = get_children( $image_args );
-             if ($attached_image) {
-                                foreach ($attached_image as $attachment_id => $attachment) {
-                                set_post_thumbnail($post->ID, $attachment_id);
-                                }
+    $post_thumbnail = bootstrapwp_post_thumbnail_check();
+  
+  
+    if ( $post_thumbnail == true ) {
+        return the_post_thumbnail();
+    
+    } elseif ( $post_thumbnail == false && ! empty( $post->ID ) ) {
+        $image_args = array(
+            'post_type' => 'attachment',
+            'numberposts' => 1,
+            'post_mime_type' => 'image',
+            'post_parent' => $post->ID,
+            'order' => 'desc'
+        );
+        
+        $attached_image = get_children( $image_args );
+        
+        if ( $attached_image ) {
+            foreach ( $attached_image as $attachment_id => $attachment ) {
+                set_post_thumbnail( $post->ID, $attachment_id );
+            }
+            
             return the_post_thumbnail();
-          } else { return " ";}
+    
+        } else {
+            return false;
+        
         }
-      }  //end function
+        
+    } else
+        return false;
+    
+}  //end function
 
 
 /*
