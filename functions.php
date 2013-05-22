@@ -381,7 +381,7 @@ function bootstrapwp_post_thumbnail_check() {
 | Will automatically add the first image attached to a post as the Featured Image if post does not have a featured image previously set.
 | */
 function bootstrapwp_autoset_featured_img() {
-
+  global $post;
   $post_thumbnail = bootstrapwp_post_thumbnail_check();
   if ($post_thumbnail == true ){
     return the_post_thumbnail();
