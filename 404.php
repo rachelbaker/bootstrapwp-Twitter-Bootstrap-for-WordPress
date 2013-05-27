@@ -34,7 +34,7 @@ get_header(); ?>
 </div><!--/.well -->
 <div class="row">
 <div class="span4">
-					<h2>All Pages</h2>
+					<h2><?php _e('All Pages', 'bootstrapwp'); ?></h2>
 					<?php wp_page_menu(); ?>
 </div><!--/.span4 -->
 <div class="span4">
