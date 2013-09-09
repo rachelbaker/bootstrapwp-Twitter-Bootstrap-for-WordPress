@@ -1,0 +1,229 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: BootstrapWP\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-06 10:48+0200\n"
+"PO-Revision-Date: 2013-09-06 11:19+0100\n"
+"Last-Translator: Matthieu Faure <mfaure@tanaguru.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:22
+msgid "This is Embarrassing"
+msgstr "Hmmm, c'est g&ecirc;nant"
+
+#: 404.php:26
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Il semble que nous n&rsquo;ayons rien ici. Peut-&ecirc;tre pourriez-vous essayer avec la recherche ou un des liens ci-apr&egrave;s."
+
+#: 404.php:43
+msgid "Most Used Categories"
+msgstr "Cat&eacute;gories les plus utilis&eacute;s"
+
+#: archive.php:29
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archives par jour&nbsp;: %s"
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archives mensuelles&nbsp;: %s"
+
+#: archive.php:33
+msgid "F Y"
+msgstr ""
+
+#: archive.php:37
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archives annuelles&nbsp;: %s"
+
+#: archive.php:38
+msgid "Y"
+msgstr ""
+
+#: archive.php:41
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Archives par mot-cl&eacute;&nbsp;: %s"
+
+#: archive.php:52
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Archives par cat&eacute;gorie&nbsp;: %s"
+
+#: archive.php:64
+msgid "Blog Archives"
+msgstr "Archives du blog"
+
+#: author.php:27
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archives de l'auteur&nbsp;: %s"
+
+#: comments.php:27
+msgid "&larr; Older Comments"
+msgstr "&larr; commentaires plus anciens"
+
+#: comments.php:30
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires  plus r&eacute;centes &rarr;"
+
+#. check for comment navigation
+#: comments.php:36
+msgid "Comments are closed."
+msgstr "Les commentaires sont ferm&eacute;s"
+
+#: functions.php:32
+msgid "Main Menu"
+msgstr "Menu principal"
+
+#: functions.php:93
+msgid "Page Sidebar"
+msgstr "Barre lat&eacute;rale des pages"
+
+#: functions.php:104
+msgid "Posts Sidebar"
+msgstr "Barre lat&eacute;rale des billets"
+
+#: functions.php:115
+msgid "Home Left"
+msgstr "Accueil zone gauche"
+
+#: functions.php:117
+msgid "Left textbox on homepage"
+msgstr "Zone de texte &agrave; gauche sur la page d'accueil"
+
+#: functions.php:127
+msgid "Home Middle"
+msgstr "Accueil zone centre"
+
+#: functions.php:129
+msgid "Middle textbox on homepage"
+msgstr "Zone de texte au centre sur la page d'accueil"
+
+#: functions.php:139
+msgid "Home Right"
+msgstr "Accueil zone droite"
+
+#: functions.php:141
+msgid "Right textbox on homepage"
+msgstr "Zone de texte &agrave; droite sur la page d'accueil"
+
+#: functions.php:151
+msgid "Footer Content"
+msgstr "Pied de page"
+
+#: functions.php:153
+msgid "Footer text or acknowledgements"
+msgstr "Contenu de pied de page ou remerciement"
+
+#: functions.php:177
+msgid "Post navigation"
+msgstr "Navigation dans les billets"
+
+#: functions.php:179
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Billets plus anciens"
+
+#: functions.php:182
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Billets plus r&eacute;cents <span class=\"meta-nav\">&rarr;</span>"
+
+#: functions.php:205
+msgid "Pingback:"
+msgstr "R&eacute;trolien"
+
+#: functions.php:225
+msgid "Post author"
+msgstr "Auteur du billet"
+
+#: functions.php:232
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de modération"
+
+#: functions.php:243
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s &agrave; %2$s"
+
+#: functions.php:251
+msgid "Reply <span>&darr;</span>"
+msgstr "R&eacute;pondre <span>&darr;</span>"
+
+#: functions.php:273
+#, php-format
+msgid "Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr "Publi&eacute; le <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline\"> <span class=\"sep\"> par </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: functions.php:279
+#, php-format
+msgid "View all posts by %s"
+msgstr "Voir tous les billets de %s"
+
+#: functions.php:379
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: functions.php:391
+#, php-format
+msgid "Home"
+msgstr "Accueil"
+
+#: functions.php:412
+#, php-format
+msgid "Archive by category"
+msgstr "Archive par cat&eacute;gorie"
+
+#: functions.php:471
+#, php-format
+msgid "Search results for"
+msgstr "R&eacute;sultats de recherche pour"
+
+#: functions.php:473
+#, php-format
+msgid "Posts tagged"
+msgstr "Billets avec mot-cl&eacute;"
+
+#: functions.php:477
+#, php-format
+msgid "Articles posted by"
+msgstr "Articles publi&eacute;s par"
+
+#: functions.php:479
+#, php-format
+msgid "Error 404"
+msgstr "Erreur 404"
+
+#: page.php:28
+msgid "Pages:"
+msgstr "Pages"
+
+#: page.php:29
+msgid "Edit"
+msgstr "&Eacute;"
+
+#: search.php:22
+#, php-format
+msgid "Search Results for: %s"
+msgstr "R&eacute;sultats de recherche pour&nbsp; %s"
+
+#. Post thumbnail conditional display.
+#: search.php:58
+msgid "No Results Found"
+msgstr "Aucun r&eacute;sultat trouv&eacute;"
+
+#: search.php:62
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you should try again with a different search term."
+msgstr "Il semble que nous ne puissions pas trouver ce que vous cherchez. Peut-être pourriez-vous essayer une recherche différente."
+
