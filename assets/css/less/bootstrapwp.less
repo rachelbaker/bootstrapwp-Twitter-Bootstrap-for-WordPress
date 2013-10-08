@@ -24,13 +24,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
 @import "mixins.less";
 
-// CSS Reset
-/*@import "reset.less";*/
+//reset
+
+@import "normalize.less";
+@import "print.less";
+
 
 // Grid system and page structure
 @import "scaffolding.less";
 @import "grid.less";
-/*@import "layouts.less";*/
 
 // Base CSS
 @import "type.less";
@@ -39,7 +41,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "tables.less";
 
 // Components: common
-/*@import "sprites.less";*/
 @import "dropdowns.less";
 @import "wells.less";
 @import "component-animations.less";
@@ -65,11 +66,23 @@ Use it to make something cool, have fun, and share what you've learned with othe
 // Components: Misc
 @import "thumbnails.less";
 @import "media.less";
-/*@import "labels-badges.less";*/
 @import "progress-bars.less";
-/*@import "accordion.less";*/
 @import "carousel.less";
-/*@import "hero-unit.less";*/
+@import "jumbotron.less";
+@import "badges.less";
+@import "glyphicons.less";
+@import "input-groups.less";
+@import "labels.less";
+@import "list-group.less";
+@import "panels.less";
+@import "theme.less";
+
+
+
+
+
+
+
 
 // Utility classes
 @import "utilities.less"; // Has to be last to override when necessary
@@ -81,23 +94,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "responsive-utilities.less";
 
 
-// Media queries
-// ------------------
-/*
-// Large desktops
-@import "responsive-1200px-min.less";
-
-// Tablets to regular desktops
-@import "responsive-768px-979px.less";
-
-// Phones to portrait tablets and narrow desktops
-@import "responsive-767px-max.less";
-
-
-// Responsive navbar
-// From 979px and below, show a button to toggle navbar contents
-@import "responsive-navbar.less";
-*/
 /* Custom BootstrapWP Overrides and Styles
 ----------------------------------------------------------------------------------------*/
 // BSWP OVERRIDES
