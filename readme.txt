@@ -1,5 +1,66 @@
 == Change Log ==
 
+=.90  = 09/09/2012
+
+__Release Highlights:__
+
+1.  Updated to Bootstrap 2.1 scripts and styles
+2. Fixed `Custom Walker Menu` PHP error
+3.  Fixed Automatic Thumbnail PHP errors
+4.  Cleaned up unnecessary theme files
+
+__Archive.php__
+
+* Replaced conditional for `the_post_thumbnail()` with `bootstrapwp_autoset_featured_img()`.
+
+__Author.php__
+
+* Replaced conditional for `the_post_thumbnail()` with `bootstrapwp_autoset_featured_img()`.
+
+__Class-bootstrapwp-walker-nav_menu.php__
+
+*   Extending Walker_Nav_Menu to modify class assigned to submenu ul element.
+
+__Footer.php__
+
+*   Cleaned up ending div tags
+
+__Functions.php__
+
+*   Fixed `bootstrapwp_autoset_featured_img()` function to return if there is no image set, clearing debug errors.
+*   Removed the post hooks for `bootstrap_autoset_featured_img()` function to clear debug errors.
+*   Added `bootstrapwp_post_thumbnail_check()` function to check if the post displayed in the loop has a post thumbnail already.
+*   Removed Custom Walker class from file and replaced with external include call for file 'includes/class-bootstrap_walker_nav_menu.php'.
+
+__Header.php__
+
+*   Updated responsive navbar wrapping to use the button element
+*   Removed wp-list-pages fallback for custom menu
+*   Removed div elements for content-wrapper and container at end of file
+
+__Index.php__
+
+*   Removed unnecessary double loop for page title.
+
+__Page.php__
+
+*   Removed '<header>' element wrapping around page title.
+
+__Page-blog.php__
+
+* Replaced conditional for `the_post_thumbnail()` with `bootstrapwp_autoset_featured_img()`.
+
+__Docs Folder__
+
+*   Removed entire 'docs' folder to clean up theme files.
+
+__IMG Folder__
+
+*   Removed sub-folder 'example-sites' to clean up theme files.
+*   Removed sub-folder 'examples' to clean up theme files.
+*   Updated with new images and icons from Bootstrap 2.1
+
+
 = .87 = 06/04/2012
 
 **Release Highlights:**
@@ -18,7 +79,7 @@ __Functions.php__
 
 __Style.css__
 
-*	Removed content because it this file is not loaded via `bootstrapwp_css_loader()` 
+*	Removed content because it this file is not loaded via `bootstrapwp_css_loader()`
 *	Added note to add custom updates to the less/bswp-custom.less file to safely retain the ability to update the less files with future versions of Bootstrap or BootstrapWP
 *	Bumped version to .87
 
@@ -59,7 +120,7 @@ __LESS Folder__
 
 __IMG Folder__
 
-*   Updated glyph icons with new set included in Bootstrap 2.04  
+*   Updated glyph icons with new set included in Bootstrap 2.04
 
 
 
