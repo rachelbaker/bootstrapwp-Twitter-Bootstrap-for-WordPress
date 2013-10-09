@@ -429,7 +429,7 @@ function bootstrapwp_breadcrumbs()
                 if (get_post_type() != 'post') {
                     $post_type = get_post_type_object(get_post_type());
                     $slug      = $post_type->rewrite;
-                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ';
+                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>'.$sep.'</li> ';
                     echo $before . get_the_title() . $after;
                 } else {
                     $cat = get_the_category();
