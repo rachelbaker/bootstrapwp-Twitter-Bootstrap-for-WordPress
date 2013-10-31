@@ -40,7 +40,7 @@ module.exports = function( grunt ) {
 				options: {
 					jshintrc: '.gruntjshintrc'
 				}
-			}   
+			}
 		},
 		uglify: {
 			all: {
@@ -62,7 +62,7 @@ module.exports = function( grunt ) {
 		test:   {
 			files: ['assets/js/test/**/*.js']
 		},
-		
+
 		less:   {
 			all: {
 				files: {
@@ -70,7 +70,7 @@ module.exports = function( grunt ) {
 				}
 			}
 		},
-		
+
 		cssmin: {
 			options: {
 				banner: '/*! <%= pkg.title %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
@@ -81,16 +81,16 @@ module.exports = function( grunt ) {
 			},
 			minify: {
 				expand: true,
-				
+
 				cwd: 'assets/css/',
 				src: ['bootstrapwp.css'],
-				
+
 				dest: 'assets/css/',
 				ext: '.min.css'
 			}
 		},
 		watch:  {
-			
+
 			less: {
 				files: ['assets/css/less/*.less'],
 				tasks: ['less', 'cssmin'],
@@ -98,7 +98,7 @@ module.exports = function( grunt ) {
 					debounceDelay: 500
 				}
 			},
-			
+
 			scripts: {
 				files: ['assets/js/src/**/*.js', 'assets/js/vendor/**/*.js'],
 				tasks: ['jshint', 'concat', 'uglify'],
@@ -110,9 +110,9 @@ module.exports = function( grunt ) {
 	} );
 
 	// Default task.
-	
+
 	grunt.registerTask( 'default', ['jshint', 'concat', 'uglify', 'less', 'cssmin'] );
-	
+
 
 	grunt.util.linefeed = '\n';
 };
