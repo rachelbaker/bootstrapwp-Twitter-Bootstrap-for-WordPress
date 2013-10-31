@@ -1,4 +1,4 @@
-col-md-<?php
+<?php
 /**
  * Description: Default Index template to display loop of blog posts
  *
@@ -19,6 +19,7 @@ get_header(); ?>
         <div class="col-md-8">
 
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
                 <div <?php post_class(); ?>>
                     <h2><a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
                         <?php the_title();?>
@@ -40,9 +41,9 @@ get_header(); ?>
                         <?php the_content(); ?>
 
                     </div>
-
                     <hr/>
-                </div><!-- /.post_class -->
+                </div>
+
             <?php endwhile; endif; ?>
 
             <?php bootstrapwp_content_nav('nav-below');?>
