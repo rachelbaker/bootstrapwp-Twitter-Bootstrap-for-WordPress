@@ -410,7 +410,6 @@ add_filter( 'wp_title', 'bootstrapwp_wp_title', 10, 2 );
 function bootstrapwp_breadcrumbs() {
 	$home   = 'Home'; // text for the 'Home' link
 	$before = '<li class="active">'; // tag before the current crumb
-	$sep    = '<span class="divider">/</span>';
 	$after  = '</li>'; // tag after the current crumb
 
 	if ( ! is_home() && ! is_front_page() || is_paged() ) {
@@ -419,7 +418,7 @@ function bootstrapwp_breadcrumbs() {
 
 		global $post;
 		$homeLink = home_url();
-		echo '<li><a href="' . $homeLink . '">' . $home . '</a> ' . $sep . '</li> ';
+		echo '<li><a href="' . $homeLink . '">' . $home . '</a></li> ';
 		if ( is_category() ) {
 			global $wp_query;
 			$cat_obj   = $wp_query->get_queried_object();
@@ -427,7 +426,7 @@ function bootstrapwp_breadcrumbs() {
 			$thisCat   = get_category( $thisCat );
 			$parentCat = get_category( $thisCat->parent );
 			if ( $thisCat->parent != 0 ) {
-				echo get_category_parents( $parentCat, true, $sep );
+				echo get_category_parents( $parentCat, true );
 			}
 			echo $before . 'Archive by category "' . single_cat_title( '', false ) . '"' . $after;
 		}
@@ -459,7 +458,7 @@ function bootstrapwp_breadcrumbs() {
 			else {
 				$cat = get_the_category();
 				$cat = $cat[0];
-				echo '<li>' . get_category_parents( $cat, true, $sep ) . '</li>';
+				echo '<li>' . get_category_parents( $cat, true ) . '</li>';
 				echo $before . get_the_title() . $after;
 			}
 		}
@@ -471,7 +470,7 @@ function bootstrapwp_breadcrumbs() {
 			$parent = get_post( $post->post_parent );
 			$cat    = get_the_category( $parent->ID );
 			$cat    = $cat[0];
-			echo get_category_parents( $cat, true, $sep );
+			echo get_category_parents( $cat, true );
 			echo '<li><a href="' . get_permalink(
 					$parent
 				) . '">' . $parent->post_title . '</a></li> ';
@@ -488,7 +487,7 @@ function bootstrapwp_breadcrumbs() {
 				$page          = get_page( $parent_id );
 				$breadcrumbs[] = '<li><a href="' . get_permalink( $page->ID ) . '">' . get_the_title(
 						$page->ID
-					) . '</a>' . $sep . '</li>';
+					) . '</a></li>';
 				$parent_id     = $page->post_parent;
 			}
 			$breadcrumbs = array_reverse( $breadcrumbs );
@@ -511,17 +510,6 @@ function bootstrapwp_breadcrumbs() {
 		elseif ( is_404() ) {
 			echo $before . 'Error 404' . $after;
 		}
-		// if ( get_query_var( 'paged' ) ) {
-		//     if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()
-		//     ) {
-		//         echo ' ( ';
-		//     }
-		//     echo __( 'Page', 'bootstrapwp' ) . $sep . get_query_var( 'paged' );
-		//     if ( is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()
-		//     ) {
-		//         echo ' )';
-		//     }
-		// }
 
 		echo '</ol>';
 
