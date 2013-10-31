@@ -1,4 +1,4 @@
-<?php
+col-md-<?php
 /**
  * Description: Default Index template to display loop of blog posts
  *
@@ -7,41 +7,39 @@
  */
 get_header(); ?>
 <div class="container">
+	<?php if ( function_exists( 'bootstrapwp_breadcrumbs' ) && ! is_home() ) : ?>
+    	<div class="row">
+        	<div class="col-md-12">
+            	<?php bootstrapwp_breadcrumbs(); ?>
+	        </div>
+	    </div>
+    <?php endif; // end breadcrumbs ?>
+
     <div class="row">
-        <div class="span12">
-            <?php if (function_exists('bootstrapwp_breadcrumbs')) {
-                bootstrapwp_breadcrumbs();
-            } ?>
-        </div><!--/.span12 -->
-    </div><!--/.row -->
+        <div class="col-md-8">
 
-    <div class="row content">
-        <div class="span8">
-
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div <?php post_class(); ?>>
-                    <a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-                        <h3><?php the_title();?></h3>
-                    </a>
+                    <h2><a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
+                        <?php the_title();?>
+                    </a></h2>
                     <p class="meta">
                         <?php echo bootstrapwp_posted_on();?>
                     </p>
 
-                    <div class="row">
+                    <div class="entry-content">
                         <?php // Post thumbnail conditional display.
                         if ( bootstrapwp_autoset_featured_img() !== false ) : ?>
-                            <div class="span2">
+                            <div class="pull-right">
                                 <a href="<?php the_permalink(); ?>" title="<?php  the_title_attribute( 'echo=0' ); ?>">
                                     <?php echo bootstrapwp_autoset_featured_img(); ?>
                                 </a>
                             </div>
-                            <div class="span6">
-                        <?php else : ?>
-                            <div class="span8">
                         <?php endif; ?>
-                                <?php the_excerpt(); ?>
-                            </div>
-                    </div><!-- /.row -->
+
+                        <?php the_content(); ?>
+
+                    </div>
 
                     <hr/>
                 </div><!-- /.post_class -->
@@ -50,5 +48,7 @@ get_header(); ?>
             <?php bootstrapwp_content_nav('nav-below');?>
         </div>
 
-    <?php get_sidebar('blog'); ?>
-    <?php get_footer(); ?>
+	    <?php get_sidebar('blog'); ?>
+
+	</div>
+<?php get_footer(); ?>

@@ -7,32 +7,47 @@
  * @subpackage BootstrapWP
  */
 get_header(); ?>
-<?php while (have_posts()) : the_post(); ?>
+<div class="container">
 
-  <div class="container">
-    <div class="row">
-        <div class="span12">
-            <?php if (function_exists('bootstrapwp_breadcrumbs')) {
-            bootstrapwp_breadcrumbs();
-        } ?>
-        </div><!--/.span12 -->
-    </div><!--/.row -->
+	<?php if ( function_exists( 'bootstrapwp_breadcrumbs' ) ) : ?>
+		<?php bootstrapwp_breadcrumbs(); ?>
+	<?php endif; // end breadcrumbs ?>
 
-    <header class="post-title">
-        <h1><?php the_title();?></h1>
-    </header>
+	<div class="row">
+    	<div class="col-md-8">
 
-    <div class="row content">
-        <div class="span8">
-             <p class="meta"><?php echo bootstrapwp_posted_on();?></p>
-            <?php the_content(); ?>
-            <?php the_tags('<p>Tags: ', ', ', '</p>'); ?>
-            <?php endwhile; // end of the loop. ?>
-            <hr/>
+			<?php while ( have_posts() ) : the_post(); ?>
 
-            <?php comments_template(); ?>
-            <?php bootstrapwp_content_nav('nav-below'); ?>
-        </div><!-- /.span8 -->
+				<div <?php post_class(); ?>>
+					<div class="page-header">
+				        <h1><?php the_title();?></h1>
+				    </div>
 
-    <?php get_sidebar('blog'); ?>
-    <?php get_footer(); ?>
+	            	<p class="meta"><?php echo bootstrapwp_posted_on();?></p>
+
+	            	<div class="entry-content">
+	            		<?php the_content(); ?>
+            		</div>
+
+	            	<?php edit_post_link(__('Edit', 'bootstrapwp'), '<button class="btn btn-default">', '</button>'); ?>
+            		<hr />
+
+	            	<?php the_tags('<p>Tags: ', ', ', '</p>'); ?>
+
+	            </div>
+
+		        <?php comments_template(); ?>
+	        <?php endwhile; // end of the loop. ?>
+
+
+
+		    <?php bootstrapwp_content_nav( 'nav-below' ); ?>
+
+		</div>
+
+    	<?php get_sidebar('blog'); ?>
+
+    </div>
+</div>
+
+<?php get_footer(); ?>

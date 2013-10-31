@@ -13,7 +13,7 @@ get_header(); ?>
 
     <div class="container">
         <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
                 <?php if (function_exists('bootstrapwp_breadcrumbs')) {
                 bootstrapwp_breadcrumbs();
             } ?>
@@ -21,7 +21,7 @@ get_header(); ?>
         </div>
 
         <div class="row content">
-            <div class="span8">
+            <div class="col-md-8">
 
                 <header class="page-title">
                     <h1><?php
@@ -79,14 +79,14 @@ get_header(); ?>
                         <div class="row">
                             <?php // Post thumbnail conditional display.
                             if ( bootstrapwp_autoset_featured_img() !== false ) : ?>
-                                <div class="span2">
+                                <div class="col-md-2">
                                     <a href="<?php the_permalink(); ?>" title="<?php  the_title_attribute( 'echo=0' ); ?>">
                                         <?php echo bootstrapwp_autoset_featured_img(); ?>
                                     </a>
                                 </div>
-                                <div class="span6">
+                                <div class="col-md-6">
                             <?php else : ?>
-                                <div class="span8">
+                                <div class="col-md-8">
                             <?php endif; ?>
                                     <?php the_excerpt(); ?>
                                 </div>

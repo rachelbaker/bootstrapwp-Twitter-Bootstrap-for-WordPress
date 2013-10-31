@@ -1,0 +1,23 @@
+{
+  "name": "bootstrapwp",
+  "title": "BootstrapWP",
+  "description": "Bootstrap3 WordPress theme",
+  "version": "1.0.0",
+  "homepage": "http://wordpress.org/themes",
+  "author": {
+    "name": "Rachel Baker",
+    "email": "rachel@rachelbaker.me"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "matchdep": "~0.1.2",
+    "grunt-contrib-concat": "~0.1.2",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-contrib-cssmin": "~0.6.0",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-nodeunit": "~0.1.2",
+    "grunt-contrib-watch": "~0.2.0",
+    "grunt-contrib-less": "~0.5.0"
+  },
+  "keywords": []
+}
