@@ -1,4 +1,6 @@
-
-README.md
+app/
+node_modules/
+.gruntjshintrc
+.jshintrc
 
 .phptidy-cache
