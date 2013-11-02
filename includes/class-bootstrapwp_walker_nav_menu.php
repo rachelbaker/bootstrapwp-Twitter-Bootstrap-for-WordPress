@@ -26,7 +26,15 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
 
 		$indent = str_repeat( "\t", $depth );
-		$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+
+		if ( $depth == 0 ) {
+
+			$output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+
+		} else {
+
+			$output .= "\n$indent<ul class=\"dropdown-submenu\">\n";
+		}
 	}
 
 	/**
@@ -41,10 +49,10 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$output .= "$indent</ul>\n";
 	}
 
-		/**
+	/**
 	 * Start the element output.
 	 *
-	 * @see Walker::start_el()
+	 * @see   Walker::start_el()
 	 *
 	 * @since 3.0.0
 	 *
@@ -59,7 +67,7 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 		$class_names = $value = '';
 
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
+		$classes   = empty( $item->classes ) ? array() : (array) $item->classes;
 		$classes[] = 'menu-item-' . $item->ID;
 
 		/**
@@ -72,7 +80,6 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 		 * @param array  $args    An array of arguments. @see wp_nav_menu()
 		 */
 		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		// $class_names .= ' dropdown';
 		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
 
 		/**
@@ -80,40 +87,51 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 		 *
 		 * @since 3.0.1
 		 *
-		 * @param string The ID that is applied to the menu item's <li>.
-		 * @param object $item The current menu item.
-		 * @param array $args An array of arguments. @see wp_nav_menu()
+		 * @param        string The ID that is applied to the menu item's <li>.
+		 * @param object $item  The current menu item.
+		 * @param array  $args  An array of arguments. @see wp_nav_menu()
 		 */
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
+		$id = apply_filters( 'nav_menu_item_id', 'menu-item-' . $item->ID, $item, $args );
 		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 
-		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+		$output .= $indent . '<li' . $id . $value . $class_names . '>';
 
-		$atts = array();
+		$atts           = array();
 		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
-		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
-		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
+		$atts['target'] = ! empty( $item->target ) ? $item->target : '';
+		$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
+		$atts['href']   = ! empty( $item->url ) ? $item->url : '';
 
-  //       $atts['data-toggle'] = 'dropdown';
+
 
 		/**
 		 * Filter the HTML attributes applied to a menu item's <a>.
 		 *
 		 * @since 3.6.0
 		 *
-		 * @param array $atts {
-		 *     The HTML attributes applied to the menu item's <a>, empty strings are ignored.
+		 * @param array  $atts   {
+		 *                       The HTML attributes applied to the menu item's <a>, empty strings are ignored.
 		 *
-		 *     @type string $title  The title attribute.
-		 *     @type string $target The target attribute.
-		 *     @type string $rel    The rel attribute.
-		 *     @type string $href   The href attribute.
+		 * @type string  $title  The title attribute.
+		 * @type string  $target The target attribute.
+		 * @type string  $rel    The rel attribute.
+		 * @type string  $href   The href attribute.
 		 * }
-		 * @param object $item The current menu item.
-		 * @param array  $args An array of arguments. @see wp_nav_menu()
+		 *
+		 * @param object $item   The current menu item.
+		 * @param array  $args   An array of arguments. @see wp_nav_menu()
 		 */
 		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
+
+		/**
+		 * Add anchor attributes for navigation dropdown menus.
+		 * Checks if li element contains dropdown class added in display_element method.
+		 */
+		if ( in_array( 'dropdown', $classes ) ) {
+			$atts['data-toggle'] = 'dropdown';
+			$atts['data-target'] = '#';
+			$atts['class'] = 'dropdown-toggle';
+		}
 
 		$attributes = '';
 		foreach ( $atts as $attr => $value ) {
@@ -124,7 +142,7 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 		}
 
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
+		$item_output .= '<a' . $attributes . '>';
 		//duplicate_hook
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= '</a>';
@@ -150,7 +168,7 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 	/**
 	 * Ends the element output, if needed.
 	 *
-	 * @see Walker::end_el()
+	 * @see   Walker::end_el()
 	 *
 	 * @since 3.0.0
 	 *
@@ -163,50 +181,51 @@ class Bootstrapwp_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$output .= "</li>\n";
 	}
 
-	function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
-        if ( !$element )
-			return;
+	 function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+	        if ( !$element )
+	 		return;
 
-		$id_field = $this->db_fields['id'];
+	 	$id_field = $this->db_fields['id'];
 
-		//display this element
-		if ( isset( $args[0] ) && is_array( $args[0] ) )
-			$args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
-		//Adds the 'parent' class to the current item if it has children
-        if( ! empty( $children_elements[$element->$id_field] ) ) {
-            array_push( $element->classes,'parent' );
-        }
+	 	//display this element
+	 	if ( isset( $args[0] ) && is_array( $args[0] ) )
+	 		$args[0]['has_children'] = ! empty( $children_elements[$element->$id_field] );
 
-		$cb_args = array_merge( array(&$output, $element, $depth), $args);
-		call_user_func_array(array($this, 'start_el'), $cb_args);
+	 	    //Adds the 'dropdown' class to the current item if it has children
+	        if( ! empty( $children_elements[$element->$id_field] ) ) {
+	            array_push( $element->classes,'dropdown' );
+	        }
 
-		$id = $element->$id_field;
+	 	$cb_args = array_merge( array(&$output, $element, $depth), $args);
+	 	call_user_func_array(array($this, 'start_el'), $cb_args);
 
-		// descend only when the depth is right and there are childrens for this element
-		if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
+	 	$id = $element->$id_field;
 
-			foreach( $children_elements[ $id ] as $child ){
+	 	// descend only when the depth is right and there are childrens for this element
+	 	if ( ($max_depth == 0 || $max_depth > $depth+1 ) && isset( $children_elements[$id]) ) {
 
-				if ( !isset($newlevel) ) {
-					$newlevel = true;
-					//start the child delimiter
-					$cb_args = array_merge( array(&$output, $depth), $args);
-					call_user_func_array(array($this, 'start_lvl'), $cb_args);
-				}
-				$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
-			}
-			unset( $children_elements[ $id ] );
-		}
+	 		foreach( $children_elements[ $id ] as $child ){
 
-		if ( isset($newlevel) && $newlevel ){
-			//end the child delimiter
-			$cb_args = array_merge( array(&$output, $depth), $args);
-			call_user_func_array(array($this, 'end_lvl'), $cb_args);
-		}
+	 			if ( !isset($newlevel) ) {
+	 				$newlevel = true;
+	 				//start the child delimiter
+	 				$cb_args = array_merge( array(&$output, $depth), $args);
+	 				call_user_func_array(array($this, 'start_lvl'), $cb_args);
+	 			}
+	 			$this->display_element( $child, $children_elements, $max_depth, $depth + 1, $args, $output );
+	 		}
+	 		unset( $children_elements[ $id ] );
+	 	}
 
-		//end this element
-		$cb_args = array_merge( array(&$output, $element, $depth), $args);
-		call_user_func_array(array($this, 'end_el'), $cb_args);
-	}
+	 	if ( isset($newlevel) && $newlevel ){
+	 		//end the child delimiter
+	 		$cb_args = array_merge( array(&$output, $depth), $args);
+	 		call_user_func_array(array($this, 'end_lvl'), $cb_args);
+	 	}
+
+	 	//end this element
+	 	$cb_args = array_merge( array(&$output, $element, $depth), $args);
+	 	call_user_func_array(array($this, 'end_el'), $cb_args);
+	 }
 
 }
