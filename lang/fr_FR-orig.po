@@ -1,0 +1,154 @@
+# Copyright (C) 2012 
+# This file is distributed under the same license as the  package.
+msgid ""
+msgstr ""
+"Project-Id-Version:  \n"
+"Report-Msgid-Bugs-To: http://osclass.org/\n"
+"POT-Creation-Date: 2012-10-29 14:56:42+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-10-29 11:56+-0300\n"
+"Last-Translator: Matthieu Faure <mfaure@tanaguru.com>\n"
+"Language-Team: Translations <translations@osclass.org>\n"
+
+#. Text in echo
+#: bootstrapwp/404.php:23
+msgid "This is Embarrassing"
+msgstr "Hmmm, c'est g&ecirc;nant"
+
+#. Text in echo
+#: bootstrapwp/404.php:24
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Il semble que nous n&rsquo;ayons rien ici. Peut-&ecirc;tre pourriez-vous essayer avec la recherche ou un des liens ci-apr&egrave;s."
+
+#. Text in echo
+#: bootstrapwp/404.php:44
+msgid "Most Used Categories"
+msgstr "Cat&eacute;gories les plus utilis&eacute;s"
+
+#. Text in echo
+#: bootstrapwp/archive.php:25
+msgid "Archives"
+msgstr "Archives"
+
+#. Text in function
+#: bootstrapwp/archive.php:25
+msgid "Daily Archives: %s"
+msgstr "Archives par jour&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/archive.php:
+msgid "Monthly Archives: %s"
+msgstr "Archives mensuelles&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/archive.php:
+msgid "Yearly Archives: %s"
+msgstr "Archives annuelles&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/archive.php:
+msgid "Tag Archives: %s"
+msgstr "Archives par mot-cl&eacute;&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/archive.php:
+msgid "Category Archives: %s"
+msgstr "Archives par cat&eacute;gorie&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/archive.php:
+msgid "Blog Archives: %s"
+msgstr "Archives du blog&nbsp;: %s"
+
+#. Text in function
+#: bootstrapwp/author.php:31
+msgid "Author Archives: %s"
+msgstr "Archives de l'auteur&nbsp;: %s"
+
+#. Text in echo
+#: bootstrapwp/comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Ce billet est prot&eacute;g&eacute; par mot de passe. Veuillez saisir le mot de passe pour acc&eacute;der aux commentaires."
+
+#. Text in echo
+#: bootstrapwp/comments.php:59
+msgid "Comments are closed."
+msgstr "Les commentaires sont fermés"
+
+#: bootstrapwp/footer.php:15
+msgid "Back to top"
+msgstr "Retour en haut de page"
+
+#. Text in function
+#: bootstrapwp/image.php:38
+msgid "&larr; Previous"
+msgstr "&larr; Pr&eacute;c&eacute;dent"
+
+#. Text in function
+#: bootstrapwp/image.php:92
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\">Ajouter un commentaire</a> ou faire un r&eactute;trolien: <a class=\"trackback-link\" href=\"%s\" rel=\"trackback\">R&eactute;trolien pour ce billet</a>."
+
+#. Text in function
+#: bootstrapwp/functions.php:202
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Billets plus anciens"
+
+#. Text in function
+#: bootstrapwp/functions.php:206
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Billets plus r&eacute;cents <span class=\"meta-nav\">&rarr;</span>"
+
+#. Text in echo
+#: bootstrapwp/image.php:98
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Les commentaires et retroliens sont ferm&eacute;s"
+
+#. Text in function
+#: bootstrapwp/image.php:94
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Les commantaires sont ferm&eacute;s, mais vous pouvez faire un r&eacute;trolien: <a class=\"trackback-link\" href=\"%s\" rel=\"trackback\">URL pour le r&eacute;trolien</a>."
+
+#. Text in function
+#: bootstrapwp/image.php:34
+#: bootstrapwp/image.php:100
+msgid "Edit"
+msgstr "Éditer"
+
+#. Text in echo
+#: bootstrapwp/search.php:36
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you should try again with a different search term."
+msgstr "Il semble n&rsquo;y avoir aucun r&eacute;sultat. Peut-&ecirc;tre pourriez-vous essayer avec une recherche diffr&eacute;."
+
+#. Text in function
+#: bootstrapwp/image.php:39
+msgid "Next &rarr;"
+msgstr "Suivant &rarr;"
+
+#. Text in echo
+#: bootstrapwp/search.php:35
+msgid "No Results Found"
+msgstr "Aucun r&eacute;sultat trouv&eacute;"
+
+#. Text in function
+#: bootstrapwp/image.php:86
+msgid "Pages:"
+msgstr "Pages:"
+
+#. Text in function
+#: bootstrapwp/image.php:22
+msgid "Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "Publi&eacute; <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+
+#. Text in function
+#: bootstrapwp/search.php:20
+msgid "Search Results for: %s"
+msgstr "R&eacute;sultats de recherche pour&nbsp; %s"
+
+#. Text in echo
+#: bootstrapwp/image.php:96
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Les r&eacute;troliens sont ferm&eacute;s, mais vous pouvez <a class=\"comment-link\" href=\"#respond\">laisser un commentaire</a>."
+
