@@ -1,21 +1,23 @@
 <?php
 /**
- * Default Footer
+ * Description: Default Footer
  *
  * @package    WordPress
  * @subpackage BootstrapWP
  */
 ?>
-<footer>
-	<div class="container">
-		<p>&copy; <?php bloginfo( 'name' ); ?> <?php echo esc_attr( date( 'Y' ) ); ?></p>
-		<?php
-		if ( function_exists( 'dynamic_sidebar' ) ) {
-			dynamic_sidebar( "footer-content" );
-		} ?>
+		<!-- End Template Content. Begin Footer. -->
+		<footer>
+			<p>&copy; <?php bloginfo( 'name' ); ?> <?php echo esc_attr( date( 'Y' ) ); ?></p>
+
+			<?php if ( function_exists( 'dynamic_sidebar' ) ) :
+				dynamic_sidebar( "footer-content" );
+			endif; ?>
+
+		</footer>
 	</div>
-	<!-- /container -->
-</footer>
-<?php wp_footer(); ?>
-</body>
+
+	<?php wp_footer(); ?>
+
+	</body>
 </html>
