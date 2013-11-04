@@ -2,54 +2,27 @@
 /**
  * Description: Default Index template to display loop of blog posts
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage BootstrapWP
  */
 get_header(); ?>
-<div class="container">
-	<?php if ( function_exists( 'bootstrapwp_breadcrumbs' ) && ! is_home() ) : ?>
-    	<div class="row">
-        	<div class="col-md-12">
-            	<?php bootstrapwp_breadcrumbs(); ?>
-	        </div>
-	    </div>
-    <?php endif; // end breadcrumbs ?>
 
-    <div class="row">
-        <div class="col-md-8">
+<?php get_template_part( 'partials/breadcrumbs' ); ?>
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<div class="row">
+	<div class="col-md-8">
 
-                <div <?php post_class(); ?>>
-                    <h2><a href="<?php the_permalink(); ?>" title="<?php the_title();?>">
-                        <?php the_title();?>
-                    </a></h2>
-                    <p class="meta">
-                        <?php echo bootstrapwp_posted_on();?>
-                    </p>
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                    <div class="entry-content">
-                        <?php // Post thumbnail conditional display.
-                        if ( bootstrapwp_autoset_featured_img() !== false ) : ?>
-                            <div class="pull-right">
-                                <a href="<?php the_permalink(); ?>" title="<?php  the_title_attribute( 'echo=0' ); ?>">
-                                    <?php echo bootstrapwp_autoset_featured_img(); ?>
-                                </a>
-                            </div>
-                        <?php endif; ?>
+			<?php get_template_part( 'partials/loop' ); ?>
 
-                        <?php the_content(); ?>
+		<?php endwhile; endif; ?>
 
-                    </div>
-                    <hr/>
-                </div>
-
-            <?php endwhile; endif; ?>
-
-            <?php bootstrapwp_content_nav('nav-below');?>
-        </div>
-
-	    <?php get_sidebar('blog'); ?>
+		<?php bootstrapwp_content_nav( 'nav-below' ); ?>
 
 	</div>
+
+	<?php get_sidebar( 'blog' ); ?>
+
+</div>
 <?php get_footer(); ?>
