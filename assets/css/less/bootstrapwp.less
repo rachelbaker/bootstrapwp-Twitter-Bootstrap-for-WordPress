@@ -6,6 +6,7 @@
  * Licensed under the GPLv2+ license.
  */
 
+
 // Core variables and mixins
 @import "variables.less";
 @import "mixins.less";
@@ -13,6 +14,7 @@
 // Reset
 @import "normalize.less";
 @import "print.less";
+
 
 // Core CSS
 @import "scaffolding.less";
@@ -56,9 +58,13 @@
 @import "utilities.less";
 @import "responsive-utilities.less";
 
-
 body {
 	padding-top: 70px;
+}
+
+// Admin Bar Navbar Fix
+.admin-bar .navbar-fixed-top {
+	top: 30px;
 }
 
 img {
