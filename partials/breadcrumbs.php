@@ -5,7 +5,7 @@
  * @package    WordPress
  * @subpackage BootstrapWP
  */
-if ( function_exists( 'bootstrapwp_breadcrumbs' ) && ! is_home() ) : ?>
+if ( function_exists( 'bootstrapwp_breadcrumbs' ) && ! is_home() || ! is_front_page() ) : ?>
 
 	<div class="row">
 		<div class="col-md-12">
