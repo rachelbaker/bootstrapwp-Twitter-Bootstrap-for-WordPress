@@ -85,9 +85,9 @@ function bootstrapwp_widgets_init() {
 			'name'          => __( 'Page Sidebar', 'bootstrapwp' ),
 			'id'            => 'sidebar-page',
 			'before_widget' => '<div id="%1$s" class="panel panel-default %2$s">',
-			'after_widget'  => "</div></div>",
+			'after_widget'  => "</div>",
 			'before_title'  => '<div class="panel-heading"><h3 class="panel-title">',
-			'after_title'   => '</h3></div><div class="panel-body">',
+			'after_title'   => '</h3></div>',
 		)
 	);
 
@@ -96,9 +96,9 @@ function bootstrapwp_widgets_init() {
 			'name'          => __( 'Posts Sidebar', 'bootstrapwp' ),
 			'id'            => 'sidebar-posts',
 			'before_widget' => '<div id="%1$s" class="panel panel-default %2$s">',
-			'after_widget'  => "</div></div>",
+			'after_widget'  => "</div>",
 			'before_title'  => '<div class="panel-heading"><h3 class="panel-title">',
-			'after_title'   => '</h3></div><div class="panel-body">',
+			'after_title'   => '</h3></div>',
 		)
 	);
 
