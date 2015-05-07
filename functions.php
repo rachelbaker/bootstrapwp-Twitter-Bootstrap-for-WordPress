@@ -388,7 +388,7 @@ add_filter('wp_title', 'bootstrapwp_wp_title', 10, 2);
  */
 function bootstrapwp_breadcrumbs()
 {
-    $home      = 'Home'; // text for the 'Home' link
+    $home      = __('Home', 'bootstrapwp'); // text for the 'Home' link
     $before    = '<li class="active">'; // tag before the current crumb
     $sep       = '<span class="divider">/</span>';
     $after     = '</li>'; // tag after the current crumb
@@ -409,7 +409,7 @@ function bootstrapwp_breadcrumbs()
                 if ($thisCat->parent != 0) {
                     echo get_category_parents($parentCat, true, $sep);
                 }
-                echo $before . 'Archive by category "' . single_cat_title('', false) . '"' . $after;
+                echo $before . __('Archive by category', 'bootstrapwp') . ' "' . single_cat_title('', false) . '"' . $after;
             } elseif (is_day()) {
                 echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time(
                     'Y'
@@ -429,7 +429,7 @@ function bootstrapwp_breadcrumbs()
                 if (get_post_type() != 'post') {
                     $post_type = get_post_type_object(get_post_type());
                     $slug      = $post_type->rewrite;
-                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a>'.$sep.'</li> ';
+                    echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ';
                     echo $before . get_the_title() . $after;
                 } else {
                     $cat = get_the_category();
@@ -468,15 +468,15 @@ function bootstrapwp_breadcrumbs()
                 }
                 echo $before . get_the_title() . $after;
             } elseif (is_search()) {
-                echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+                echo $before . __('Search results for', 'bootstrapwp') . ' "'. get_search_query() . '"' . $after;
             } elseif (is_tag()) {
-                echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+                echo $before . __('Posts tagged', 'bootstrapwp') . ' "' . single_tag_title('', false) . '"' . $after;
             } elseif (is_author()) {
                 global $author;
                 $userdata = get_userdata($author);
-                echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+                echo $before . __('Articles posted by', 'bootstrapwp') . ' ' . $userdata->display_name . $after;
             } elseif (is_404()) {
-                echo $before . 'Error 404' . $after;
+                echo $before . __('Error 404', 'bootstrapwp') . $after;
             }
             // if (get_query_var('paged')) {
             //     if (is_category() || is_day() || is_month() || is_year() || is_search() || is_tag() || is_author()
