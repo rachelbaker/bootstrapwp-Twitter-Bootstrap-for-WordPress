@@ -1,0 +1,145 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: Rachel Baker <rachel@rachelbaker.me>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+""
+
+#. Text in function
+#: bootstrapwp/image.php:38
+msgid "&larr; Previous"
+msgstr "&larr; Предыдущий"
+
+
+#. Text in function
+#: bootstrapwp/image.php:92
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Отправьте комментарий\">Отправить комментарий</a> или оставьте ссылку по теме: <a class=\"trackback-link\" href=\"%s\" title=\"Ссылка по теме вашего сообщения\" rel=\"trackback\">URL ссылки</a>."
+
+
+#. Text in function
+#: bootstrapwp/functions.php:202
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Старые записи"
+
+
+#. Text in echo
+#: bootstrapwp/archive.php:25
+msgid "Archives"
+msgstr "Архивные записи"
+
+
+#. Text in function
+#: bootstrapwp/author.php:31
+msgid "Author Archives: %s"
+msgstr "Автор Архивы: %s"
+
+
+#. Text in echo
+#: bootstrapwp/image.php:98
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Комментирование и добавление ссылок закрыто."
+
+
+#. Text in function
+#: bootstrapwp/image.php:94
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Комментирование закрыто, но вы можете оставить ссылку по теме: <a class=\"trackback-link\" href=\"%s\" title=\"Ссылка по теме вашего сообщения\" rel=\"trackback\">URL ссылки</a>."
+
+
+#. Text in echo
+#: bootstrapwp/comments.php:59
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+
+#. Text in function
+#: bootstrapwp/archive.php:25
+msgid "Daily Archives: %s"
+msgstr "Архивы дня: %s"
+
+
+#. Text in function
+#: bootstrapwp/image.php:34
+#: bootstrapwp/image.php:100
+msgid "Edit"
+msgstr "Редактировать"
+
+
+#. Text in echo
+#: bootstrapwp/404.php:24
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Похоже, что не удалось найти то что вы запросили может быть нижеприведенные ссылки вам помогут или воспользуйтесь поиском.    "
+
+
+#. Text in echo
+#: bootstrapwp/search.php:36
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps you should try again with a different search term."
+msgstr "То что вы ищете не нашлось, попробуйте другой запрос для поиска."
+
+
+#. Text in echo
+#: bootstrapwp/404.php:44
+msgid "Most Used Categories"
+msgstr "Самые популярные категории. "
+
+
+#. Text in function
+#: bootstrapwp/functions.php:206
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Никогда не публиковать<span class=\"meta-nav\">&rarr;</span>"
+
+
+#. Text in function
+#: bootstrapwp/image.php:39
+msgid "Next &rarr;"
+msgstr "Следующий &rarr;"
+
+
+#. Text in echo
+#: bootstrapwp/search.php:35
+msgid "No Results Found"
+msgstr "Результаты не найдены"
+
+
+#. Text in function
+#: bootstrapwp/image.php:86
+msgid "Pages:"
+msgstr "Страницы:"
+
+
+#. Text in function
+#: bootstrapwp/image.php:22
+msgid "Published <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+msgstr "Опубликовано <span class=\"entry-date\"><abbr class=\"published\" title=\"%1$s\">%2$s</abbr></span> at <a href=\"%3$s\" title=\"Ссылка на полноразмерную картинку\">%4$s &раз; %5$s</a> в <a href=\"%6$s\" title=\"Вернутся к %7$s\" rel=\"gallery\">%7$s</a>"
+
+
+#. Text in function
+#: bootstrapwp/search.php:20
+msgid "Search Results for: %s"
+msgstr "Результат поиска: %s"
+
+
+#. Text in echo
+#: bootstrapwp/404.php:23
+msgid "This is Embarrassing"
+msgstr "Неприятность, что-то пошло не так как хочется"
+
+
+#. Text in echo
+#: bootstrapwp/comments.php:19
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Эта публикация защищена паролем, введите пароль чтобы увидеть комментарии."
+
+
+#. Text in echo
+#: bootstrapwp/image.php:96
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Ссылки по теме оставить нельзя, но вы можете<a class=\"comment-link\" href=\"#respond\" title=\"Отправить комментарий\">Отправить комментарий</a>."
+
+
